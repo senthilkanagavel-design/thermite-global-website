@@ -97,12 +97,12 @@ export function ServiceDetailPage({
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative w-full min-w-0"
             >
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl bg-primary/20">
                 <Image
                   src={image}
                   alt={title}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                   priority
                 />
               </div>
