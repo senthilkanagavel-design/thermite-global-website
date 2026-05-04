@@ -48,7 +48,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section className="py-12 lg:py-16 bg-muted/30">
+    <section className="py-10 lg:py-14 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Header */}
@@ -60,10 +60,10 @@ export function FAQ() {
             className="lg:sticky lg:top-32 lg:self-start"
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">FAQ</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
               Get answers to common questions about our revenue cycle management services. Have more questions? Our team is here to help.
             </p>
             <Link href="/contact">

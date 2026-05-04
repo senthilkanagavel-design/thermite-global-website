@@ -40,9 +40,9 @@ const benefits = [
 
 export function About() {
   return (
-    <section className="py-12 lg:py-16 bg-muted/30">
+    <section className="py-10 lg:py-14 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -85,15 +85,15 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">About Us</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">
               Your Partner for Healthcare Revenue Excellence
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
               At Thermite Global Solutions, we combine cutting-edge technology with deep healthcare expertise to transform your revenue cycle. Our global team of certified professionals works tirelessly to maximize your collections and minimize denials.
             </p>
 
             {/* Benefits List */}
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <div className="grid sm:grid-cols-2 gap-3 mb-6">
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit}
@@ -124,7 +124,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-10"
         >
           {highlights.map((item, index) => (
             <motion.div
@@ -133,7 +133,7 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card rounded-xl border border-border p-6 text-center hover:shadow-lg transition-shadow"
+              className="bg-card rounded-xl border border-border p-5 text-center hover:shadow-lg transition-shadow"
             >
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <item.icon className="h-6 w-6 text-primary" />

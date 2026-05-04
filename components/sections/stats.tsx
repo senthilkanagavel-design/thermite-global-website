@@ -61,7 +61,7 @@ function AnimatedCounter({ value, suffix, prefix }: { value: number; suffix: str
 
 export function Stats() {
   return (
-    <section className="py-12 bg-primary relative overflow-hidden">
+    <section className="py-10 bg-primary relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
@@ -75,16 +75,16 @@ export function Stats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-10"
+          className="text-center mb-8"
         >
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Results That Matter</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mt-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mt-2">
             Proven Performance Metrics
           </h2>
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -94,7 +94,7 @@ export function Stats() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-accent mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
               </div>
               <h3 className="text-lg md:text-xl font-semibold text-primary-foreground mb-1">

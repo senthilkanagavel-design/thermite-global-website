@@ -30,7 +30,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-12 lg:py-16 bg-background">
+    <section className="py-10 lg:py-14 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -38,19 +38,19 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-10"
+          className="text-center max-w-3xl mx-auto mb-8"
         >
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Testimonials</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-3">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             Healthcare providers across the nation trust us with their revenue cycle management.
           </p>
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.author}
@@ -58,27 +58,27 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card rounded-xl border border-border p-8 hover:shadow-xl transition-shadow"
+              className="bg-card rounded-xl border border-border p-6 hover:shadow-lg transition-shadow"
             >
               {/* Quote Icon */}
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6">
-                <Quote className="h-6 w-6 text-secondary" />
+              <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
+                <Quote className="h-5 w-5 text-secondary" />
               </div>
 
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 fill-accent text-accent" />
                 ))}
               </div>
 
               {/* Quote */}
-              <p className="text-foreground leading-relaxed mb-6">
+              <p className="text-sm text-foreground leading-relaxed mb-4">
                 {`"${testimonial.quote}"`}
               </p>
 
               {/* Metrics */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {testimonial.metrics.map((metric) => (
                   <span
                     key={metric}

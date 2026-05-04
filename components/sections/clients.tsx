@@ -13,21 +13,21 @@ const certifications = [
 
 export function Clients() {
   return (
-    <section className="py-10 bg-background border-y border-border">
+    <section className="py-8 bg-background border-y border-border">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-6"
+          className="text-center mb-5"
         >
-          <p className="text-muted-foreground font-medium">
+          <p className="text-muted-foreground text-sm font-medium">
             Certified & Trusted by Healthcare Organizations Nationwide
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
+        <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-12">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.name}
@@ -35,10 +35,10 @@ export function Clients() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex flex-col items-center gap-2"
+              className="flex flex-col items-center gap-1.5"
             >
-              <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
-                <span className="text-sm font-bold text-primary">{cert.abbr}</span>
+              <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                <span className="text-xs font-bold text-primary">{cert.abbr}</span>
               </div>
               <span className="text-xs text-muted-foreground font-medium">{cert.name}</span>
             </motion.div>

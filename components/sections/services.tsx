@@ -60,7 +60,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="py-12 lg:py-16 bg-background">
+    <section className="py-10 lg:py-14 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -68,19 +68,19 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-10"
+          className="text-center max-w-3xl mx-auto mb-8"
         >
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Services</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-3">
             Comprehensive RCM Solutions
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             From coding to collections, we provide end-to-end revenue cycle management services tailored to your practice needs.
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -90,32 +90,32 @@ export function Services() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Link href={service.href} className="group block h-full">
-                <div className="h-full bg-card rounded-xl border border-border p-8 hover:shadow-xl hover:border-secondary/30 transition-all duration-300">
+                <div className="h-full bg-card rounded-xl border border-border p-5 hover:shadow-lg hover:border-secondary/30 transition-all duration-300">
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
-                    <service.icon className="h-7 w-7 text-secondary group-hover:text-secondary-foreground transition-colors" />
+                  <div className="w-11 h-11 rounded-lg bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
+                    <service.icon className="h-5 w-5 text-secondary group-hover:text-secondary-foreground transition-colors" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                  <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-1.5 mb-4">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-2 text-sm text-foreground/70">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
                   {/* Link */}
-                  <div className="flex items-center gap-2 text-secondary font-medium group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-2 text-secondary text-sm font-medium group-hover:gap-3 transition-all">
                     Learn More
                     <ArrowRight className="h-4 w-4" />
                   </div>
@@ -131,7 +131,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-16"
+          className="text-center mt-10"
         >
           <Link href="/services">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8">

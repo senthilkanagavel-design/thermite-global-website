@@ -38,7 +38,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="py-12 lg:py-16 bg-muted/30">
+    <section className="py-10 lg:py-14 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -46,13 +46,13 @@ export function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-10"
+          className="text-center max-w-3xl mx-auto mb-8"
         >
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Process</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-3">
             Streamlined Revenue Cycle Process
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             Our proven methodology ensures efficient claims processing and maximum reimbursement at every step.
           </p>
         </motion.div>
@@ -75,8 +75,8 @@ export function Process() {
                 {/* Step Number Circle */}
                 <div className="flex justify-center mb-6">
                   <div className="relative">
-                    <div className="w-20 h-20 rounded-full bg-card border-4 border-secondary flex items-center justify-center shadow-lg">
-                      <step.icon className="h-8 w-8 text-secondary" />
+                    <div className="w-16 h-16 rounded-full bg-card border-4 border-secondary flex items-center justify-center shadow-lg">
+                      <step.icon className="h-7 w-7 text-secondary" />
                     </div>
                     <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent text-accent-foreground text-sm font-bold flex items-center justify-center shadow">
                       {step.step}

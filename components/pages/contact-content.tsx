@@ -79,7 +79,7 @@ export function ContactPageContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -88,7 +88,7 @@ export function ContactPageContent() {
             className="text-center max-w-4xl mx-auto"
           >
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Contact Us</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mt-2 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mt-2 mb-6">
               {"Let's Start a Conversation"}
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
@@ -99,7 +99,7 @@ export function ContactPageContent() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
@@ -141,7 +141,7 @@ export function ContactPageContent() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:col-span-2"
             >
-              <div className="bg-card rounded-2xl border border-border p-8 shadow-lg">
+              <div className="bg-card rounded-2xl border border-border p-6 shadow-lg">
                 {isSubmitted ? (
                   <div className="text-center py-12">
                     <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-6">

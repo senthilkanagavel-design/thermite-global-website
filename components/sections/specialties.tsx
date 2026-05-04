@@ -46,7 +46,7 @@ const specialties = [
 
 export function Specialties() {
   return (
-    <section className="py-12 lg:py-16 bg-background">
+    <section className="py-10 lg:py-14 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -54,13 +54,13 @@ export function Specialties() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-10"
+          className="text-center max-w-3xl mx-auto mb-8"
         >
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Specialties</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-3">
             Expertise Across Medical Specialties
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             Our certified coders and billers have deep expertise in specialty-specific requirements, payer nuances, and compliance regulations.
           </p>
         </motion.div>
@@ -104,7 +104,7 @@ export function Specialties() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mt-8"
+          className="text-center mt-6"
         >
           <p className="text-muted-foreground mb-4">
             {"Don't see your specialty? We work with all medical specialties."}

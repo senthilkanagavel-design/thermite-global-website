@@ -124,7 +124,7 @@ export function ServicesPageContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -133,10 +133,10 @@ export function ServicesPageContent() {
             className="text-center max-w-4xl mx-auto"
           >
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Services</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mt-2 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mt-2 mb-6">
               Comprehensive RCM Solutions
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
+            <p className="text-base md:text-lg text-primary-foreground/80 leading-relaxed">
               From coding to collections, we provide end-to-end revenue cycle management services that maximize your reimbursement and minimize administrative burden.
             </p>
           </motion.div>
@@ -144,7 +144,7 @@ export function ServicesPageContent() {
       </section>
 
       {/* Services List */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
           <div className="space-y-24">
             {services.map((service, index) => (
@@ -179,7 +179,7 @@ export function ServicesPageContent() {
                   <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                     {service.title}
                   </h2>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                     {service.description}
                   </p>
 
@@ -206,7 +206,7 @@ export function ServicesPageContent() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -218,7 +218,7 @@ export function ServicesPageContent() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Ready to Optimize Your Revenue Cycle?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base text-muted-foreground mb-5">
               Schedule a free consultation to discuss your specific needs and discover how we can help improve your financial performance.
             </p>
             <Link href="/contact">

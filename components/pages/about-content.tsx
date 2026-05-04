@@ -59,7 +59,7 @@ export function AboutPageContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ export function AboutPageContent() {
             className="text-center max-w-4xl mx-auto"
           >
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">About Us</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mt-2 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mt-2 mb-6">
               Revenue Cycle. Reimagined.
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
@@ -81,7 +81,7 @@ export function AboutPageContent() {
       {/* Stats Bar */}
       <section className="bg-secondary py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -100,7 +100,7 @@ export function AboutPageContent() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -110,7 +110,7 @@ export function AboutPageContent() {
               transition={{ duration: 0.6 }}
             >
               <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Story</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-6">
                 Built on a Foundation of Excellence
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -152,7 +152,7 @@ export function AboutPageContent() {
       </section>
 
       {/* Our Values */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -162,7 +162,7 @@ export function AboutPageContent() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Values</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">
               What Drives Us
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -170,7 +170,7 @@ export function AboutPageContent() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
@@ -178,7 +178,7 @@ export function AboutPageContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-xl border border-border p-8 text-center hover:shadow-lg transition-shadow"
+                className="bg-card rounded-xl border border-border p-5 text-center hover:shadow-lg transition-shadow"
               >
                 <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center mx-auto mb-6">
                   <value.icon className="h-7 w-7 text-secondary" />
@@ -192,7 +192,7 @@ export function AboutPageContent() {
       </section>
 
       {/* Global Presence */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -202,7 +202,7 @@ export function AboutPageContent() {
               transition={{ duration: 0.6 }}
             >
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">Global Presence</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">
                 Delivering Excellence Worldwide
               </h2>
               <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
@@ -261,7 +261,7 @@ export function AboutPageContent() {
       </section>
 
       {/* Certifications */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -271,7 +271,7 @@ export function AboutPageContent() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Certifications</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">
               Trusted & Certified
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -300,7 +300,7 @@ export function AboutPageContent() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary">
+      <section className="py-12 bg-secondary">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

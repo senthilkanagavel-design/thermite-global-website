@@ -21,7 +21,7 @@ export function Hero() {
         <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-t from-accent/5 to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 py-12 lg:py-20">
+      <div className="container mx-auto px-4 py-10 lg:py-14">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
@@ -35,17 +35,17 @@ export function Hero() {
               Trusted by 500+ Healthcare Providers
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary leading-tight mb-5">
               Revenue Cycle.{" "}
               <span className="text-secondary">Reimagined.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 max-w-xl">
               Comprehensive healthcare revenue cycle management solutions that maximize collections, reduce denials, and streamline your financial operations.
             </p>
 
             {/* Feature List */}
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-3 mb-6">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature}

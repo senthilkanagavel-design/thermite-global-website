@@ -58,7 +58,7 @@ export function ServiceDetailPage({
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -70,7 +70,7 @@ export function ServiceDetailPage({
                 <Icon className="h-4 w-4" />
                 {subtitle}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
                 {title}
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
@@ -114,7 +114,7 @@ export function ServiceDetailPage({
       {/* Stats Bar */}
       <section className="bg-secondary py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -133,7 +133,7 @@ export function ServiceDetailPage({
       </section>
 
       {/* Benefits */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -143,12 +143,12 @@ export function ServiceDetailPage({
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Benefits</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">
               Why Choose Our {title}
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-5">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -156,7 +156,7 @@ export function ServiceDetailPage({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-xl border border-border p-8 hover:shadow-lg transition-shadow"
+                className="bg-card rounded-xl border border-border p-5 hover:shadow-lg transition-shadow"
               >
                 <h3 className="text-xl font-bold text-primary mb-3">{benefit.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
@@ -167,7 +167,7 @@ export function ServiceDetailPage({
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -177,7 +177,7 @@ export function ServiceDetailPage({
               transition={{ duration: 0.6 }}
             >
               <span className="text-secondary font-semibold text-sm uppercase tracking-wider">What We Offer</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-6">
                 Comprehensive Service Features
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -212,7 +212,7 @@ export function ServiceDetailPage({
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -222,12 +222,12 @@ export function ServiceDetailPage({
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Process</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">
               How We Work With You
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {process.map((step, index) => (
               <motion.div
                 key={step.title}
@@ -247,7 +247,7 @@ export function ServiceDetailPage({
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-12 bg-primary">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -7,7 +7,7 @@ import { ArrowRight, Phone, Calendar } from "lucide-react"
 
 export function CTA() {
   return (
-    <section className="py-12 lg:py-16 bg-gradient-to-br from-secondary via-secondary/95 to-secondary relative overflow-hidden">
+    <section className="py-10 lg:py-14 bg-gradient-to-br from-secondary via-secondary/95 to-secondary relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
@@ -22,10 +22,10 @@ export function CTA() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
             Ready to Transform Your Revenue Cycle?
           </h2>
-          <p className="text-lg md:text-xl text-secondary-foreground/80 leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-secondary-foreground/80 leading-relaxed mb-8 max-w-2xl mx-auto">
             Schedule a free consultation with our RCM experts and discover how we can help maximize your collections and streamline your operations.
           </p>
 
