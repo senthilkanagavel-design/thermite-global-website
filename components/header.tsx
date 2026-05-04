@@ -123,9 +123,9 @@ export function Header() {
             <Image
               src="/tgs-logo-transparent.png"
               alt="Thermite Global Solutions"
-              width={80}
-              height={80}
-              className="h-14 w-auto object-contain"
+              width={100}
+              height={100}
+              className="h-16 w-auto object-contain"
               priority
             />
             <div className="hidden sm:flex flex-col leading-tight border-l border-white/20 pl-3">
