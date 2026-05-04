@@ -76,7 +76,7 @@ export function Process() {
         </motion.div>
 
         {/* Steps */}
-        <div className="flex items-stretch gap-0 overflow-x-auto pb-2">
+        <div className="flex items-stretch gap-0 overflow-x-auto pb-2 justify-center">
           {steps.map((step, index) => (
             <div key={step.step} className="flex items-center flex-shrink-0">
               <motion.div
