@@ -58,7 +58,7 @@ export function ServiceDetailPage({
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-12 lg:py-16">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-8 lg:py-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -73,7 +73,7 @@ export function ServiceDetailPage({
               <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
                 {title}
               </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
+              <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
                 {description}
               </p>
               <div className="flex flex-wrap gap-4">
@@ -133,7 +133,7 @@ export function ServiceDetailPage({
       </section>
 
       {/* Benefits */}
-      <section className="py-12 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -167,7 +167,7 @@ export function ServiceDetailPage({
       </section>
 
       {/* Features */}
-      <section className="py-12 bg-muted/30">
+      <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -180,7 +180,7 @@ export function ServiceDetailPage({
               <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-6">
                 Comprehensive Service Features
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-5">
                 Our service includes everything you need for a successful revenue cycle, delivered by experienced professionals using the latest technology.
               </p>
             </motion.div>
@@ -212,7 +212,7 @@ export function ServiceDetailPage({
       </section>
 
       {/* Process */}
-      <section className="py-12 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -247,7 +247,7 @@ export function ServiceDetailPage({
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 bg-primary">
+      <section className="py-8 bg-primary">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -259,7 +259,7 @@ export function ServiceDetailPage({
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-lg text-primary-foreground/80 mb-8">
+            <p className="text-lg text-primary-foreground/80 mb-5">
               Schedule a free consultation to discuss your needs and receive a customized proposal for your practice.
             </p>
             <Link href="/contact">

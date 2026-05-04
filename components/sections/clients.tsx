@@ -13,7 +13,7 @@ const certifications = [
 
 export function Clients() {
   return (
-    <section className="py-8 bg-background border-y border-border">
+    <section className="py-6 bg-background border-y border-border">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

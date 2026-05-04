@@ -48,7 +48,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section className="py-10 lg:py-14 bg-muted/30">
+    <section className="py-6 lg:py-10 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Header */}

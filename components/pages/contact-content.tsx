@@ -79,7 +79,7 @@ export function ContactPageContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-12 lg:py-16">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-8 lg:py-12">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -99,7 +99,7 @@ export function ContactPageContent() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-12 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
@@ -111,7 +111,7 @@ export function ContactPageContent() {
               className="lg:col-span-1"
             >
               <h2 className="text-2xl font-bold text-primary mb-6">Get In Touch</h2>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-muted-foreground mb-5 leading-relaxed">
                 Have questions about our services? Our team is here to help. Reach out through any of the channels below or fill out the form.
               </p>
 
@@ -161,7 +161,7 @@ export function ContactPageContent() {
                 ) : (
                   <>
                     <h2 className="text-2xl font-bold text-primary mb-2">Request a Consultation</h2>
-                    <p className="text-muted-foreground mb-8">Fill out the form below and we will get back to you within 24 hours.</p>
+                    <p className="text-muted-foreground mb-5">Fill out the form below and we will get back to you within 24 hours.</p>
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid sm:grid-cols-2 gap-6">

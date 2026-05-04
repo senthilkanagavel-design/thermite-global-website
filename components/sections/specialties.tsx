@@ -46,7 +46,7 @@ const specialties = [
 
 export function Specialties() {
   return (
-    <section className="py-10 lg:py-14 bg-background">
+    <section className="py-6 lg:py-10 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -54,7 +54,7 @@ export function Specialties() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-8"
+          className="text-center max-w-3xl mx-auto mb-5"
         >
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Specialties</span>
           <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-3">

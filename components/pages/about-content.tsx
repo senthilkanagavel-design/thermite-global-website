@@ -59,7 +59,7 @@ export function AboutPageContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-12 lg:py-16">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-8 lg:py-12">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -100,7 +100,7 @@ export function AboutPageContent() {
       </section>
 
       {/* Our Story */}
-      <section className="py-12 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -119,7 +119,7 @@ export function AboutPageContent() {
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 What started as a small team of passionate billing experts has grown into a global organization with operations in the United States, India, and the Philippines. Our growth has been driven by our unwavering commitment to client success and our ability to deliver measurable results.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-5">
                 Today, we serve over 500 healthcare providers across all specialties, managing billions of dollars in claims annually. Our team of 500+ certified professionals combines deep healthcare expertise with cutting-edge technology to deliver industry-leading outcomes.
               </p>
 
@@ -152,7 +152,7 @@ export function AboutPageContent() {
       </section>
 
       {/* Our Values */}
-      <section className="py-12 bg-muted/30">
+      <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -192,7 +192,7 @@ export function AboutPageContent() {
       </section>
 
       {/* Global Presence */}
-      <section className="py-12 bg-primary text-primary-foreground">
+      <section className="py-8 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -205,7 +205,7 @@ export function AboutPageContent() {
               <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">
                 Delivering Excellence Worldwide
               </h2>
-              <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
+              <p className="text-lg text-primary-foreground/80 leading-relaxed mb-5">
                 Our global delivery model combines the best of both worlds: US-based client management with highly skilled offshore teams that provide 24/7 coverage and significant cost advantages.
               </p>
 
@@ -261,7 +261,7 @@ export function AboutPageContent() {
       </section>
 
       {/* Certifications */}
-      <section className="py-12 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -300,7 +300,7 @@ export function AboutPageContent() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 bg-secondary">
+      <section className="py-8 bg-secondary">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -312,7 +312,7 @@ export function AboutPageContent() {
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
               Ready to Partner With Us?
             </h2>
-            <p className="text-lg text-secondary-foreground/80 mb-8">
+            <p className="text-lg text-secondary-foreground/80 mb-5">
               Join the growing number of healthcare providers who trust Thermite Global Solutions with their revenue cycle.
             </p>
             <Link href="/contact">

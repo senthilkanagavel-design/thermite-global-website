@@ -60,7 +60,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="py-10 lg:py-14 bg-background">
+    <section className="py-6 lg:py-10 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -68,7 +68,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-8"
+          className="text-center max-w-3xl mx-auto mb-5"
         >
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Services</span>
           <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-3">
@@ -131,7 +131,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-10"
+          className="text-center mt-6"
         >
           <Link href="/services">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8">

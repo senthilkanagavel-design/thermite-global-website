@@ -46,7 +46,7 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-10 lg:py-14 bg-primary text-primary-foreground relative overflow-hidden">
+    <section className="py-6 lg:py-6 bg-primary text-primary-foreground relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-secondary/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
@@ -66,7 +66,7 @@ export function WhyChooseUs() {
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
               The Thermite Advantage
             </h2>
-            <p className="text-base text-primary-foreground/80 leading-relaxed mb-8">
+            <p className="text-base text-primary-foreground/80 leading-relaxed mb-5">
               We combine cutting-edge technology with deep healthcare expertise to deliver results that matter. Here&apos;s what sets us apart from other RCM providers.
             </p>
 

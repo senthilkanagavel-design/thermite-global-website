@@ -33,7 +33,7 @@ export function Footer() {
   return (
     <footer className="bg-[#0a1628] text-white">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-10">
+      <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">

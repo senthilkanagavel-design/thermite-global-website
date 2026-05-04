@@ -61,7 +61,7 @@ function AnimatedCounter({ value, suffix, prefix }: { value: number; suffix: str
 
 export function Stats() {
   return (
-    <section className="py-10 bg-primary relative overflow-hidden">
+    <section className="py-6 bg-primary relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
@@ -75,7 +75,7 @@ export function Stats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-8"
+          className="text-center mb-5"
         >
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Results That Matter</span>
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mt-2">

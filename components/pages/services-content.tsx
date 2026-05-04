@@ -124,7 +124,7 @@ export function ServicesPageContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-12 lg:py-16">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-8 lg:py-12">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -144,7 +144,7 @@ export function ServicesPageContent() {
       </section>
 
       {/* Services List */}
-      <section className="py-12 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
           <div className="space-y-24">
             {services.map((service, index) => (
@@ -183,7 +183,7 @@ export function ServicesPageContent() {
                     {service.description}
                   </p>
 
-                  <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                  <div className="grid sm:grid-cols-2 gap-4 mb-5">
                     {service.features.map((feature) => (
                       <div key={feature} className="flex items-center gap-3">
                         <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0" />
@@ -206,7 +206,7 @@ export function ServicesPageContent() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 bg-muted/30">
+      <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
