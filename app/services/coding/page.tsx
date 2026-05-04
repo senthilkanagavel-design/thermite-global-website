@@ -12,7 +12,7 @@ const serviceData = {
   title: "Medical Coding",
   subtitle: "Expert Coding Services",
   description: "Our team of certified coders delivers accurate, compliant coding across all specialties. We maximize your reimbursement while ensuring full compliance with payer requirements and regulatory guidelines.",
-  image: "/images/service-coding.jpg",
+  image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
   benefits: [
     {
       title: "99% Coding Accuracy",

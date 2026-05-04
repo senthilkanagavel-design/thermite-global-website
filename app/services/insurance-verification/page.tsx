@@ -12,7 +12,7 @@ const serviceData = {
   title: "Insurance Verification",
   subtitle: "Real-Time Eligibility Checks",
   description: "We verify patient insurance coverage and benefits before the appointment, eliminating eligibility-related denials and ensuring your team has accurate information at the point of care.",
-  image: "/images/service-billing.jpg",
+  image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&q=80",
   benefits: [
     { title: "Eliminate Eligibility Denials", description: "Real-time verification before every encounter catches coverage issues before they become denials." },
     { title: "Accurate Patient Estimates", description: "Know patient responsibility upfront — deductibles, co-pays and out-of-pocket balances verified at the source." },

@@ -12,7 +12,7 @@ const serviceData = {
   title: "Payment Posting",
   subtitle: "Accurate Payment Reconciliation",
   description: "We post all insurance and patient payments accurately and on time, reconcile ERAs and EOBs, and flag every variance so your AR picture is always clean and current.",
-  image: "/images/service-billing.jpg",
+  image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
   benefits: [
     { title: "Same-Day Posting", description: "Payments posted the same day they are received, keeping your AR current and your reporting accurate." },
     { title: "99.9% Posting Accuracy", description: "Multi-step verification process eliminates posting errors that create patient complaints and rework." },

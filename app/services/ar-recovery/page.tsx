@@ -12,7 +12,7 @@ const serviceData = {
   title: "AR Recovery",
   subtitle: "Accounts Receivable Management",
   description: "Our aggressive AR recovery services maximize collections on aged claims and improve your overall financial performance. We specialize in recovering revenue that other billing companies leave on the table.",
-  image: "/images/service-ar.jpg",
+  image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&q=80",
   benefits: [
     {
       title: "Recover Lost Revenue",
