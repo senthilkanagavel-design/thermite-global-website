@@ -12,7 +12,7 @@ const serviceData = {
   title: "Denial Management",
   subtitle: "Recover Every Dollar You've Earned",
   description: "We identify, appeal and resolve denied claims while addressing the root causes that created them — stopping the same denials from recurring month after month.",
-  image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80",
+  image: "/images/service-denial-management.jpg",
   benefits: [
     { title: "Higher Recovery Rate", description: "Experienced appeal specialists recover revenue from denials that most practices write off as lost." },
     { title: "Root Cause Resolution", description: "We don't just fix denials — we identify why they happened and fix the upstream process." },

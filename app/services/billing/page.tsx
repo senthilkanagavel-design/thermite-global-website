@@ -12,7 +12,7 @@ const serviceData = {
   title: "Medical Billing",
   subtitle: "Comprehensive Billing Solutions",
   description: "Our end-to-end billing services streamline your revenue cycle from claim creation to payment posting. We handle the complexities of medical billing so you can focus on patient care.",
-  image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+  image: "/images/service-medical-billing.jpg",
   benefits: [
     {
       title: "Accelerated Cash Flow",

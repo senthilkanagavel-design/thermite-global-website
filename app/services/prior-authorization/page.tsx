@@ -12,7 +12,7 @@ const serviceData = {
   title: "Prior Authorization",
   subtitle: "Streamlined Authorization Management",
   description: "We manage the entire prior authorization process on your behalf — from submission to approval — so your clinicians spend time on patients, not paperwork.",
-  image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+  image: "/images/service-prior-authorization.jpg",
   benefits: [
     { title: "Faster Approvals", description: "Dedicated auth specialists who know payer requirements get approvals faster with fewer follow-up calls." },
     { title: "Reduced Treatment Delays", description: "Timely authorizations mean patients receive care on schedule without unnecessary delays." },

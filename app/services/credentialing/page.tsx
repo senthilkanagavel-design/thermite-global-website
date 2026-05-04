@@ -12,7 +12,7 @@ const serviceData = {
   title: "Provider Credentialing",
   subtitle: "Provider Enrollment Services",
   description: "We manage the complete credentialing and enrollment process for your providers — from initial applications to re-credentialing — so they can start billing without delays.",
-  image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80",
+  image: "/images/service-credentialing.jpg",
   benefits: [
     { title: "Faster Enrollment", description: "Dedicated credentialing specialists who know payer requirements get providers enrolled faster." },
     { title: "No Revenue Gaps", description: "Proactive re-credentialing management ensures providers never lapse, eliminating billing gaps." },

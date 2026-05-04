@@ -12,7 +12,7 @@ const serviceData = {
   title: "Benefits Verification",
   subtitle: "Complete Benefits Analysis",
   description: "We perform a thorough benefits analysis for every patient before their appointment — confirming coverage, co-pays, deductibles and authorisation requirements so your team is always prepared.",
-  image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=800&q=80",
+  image: "/images/service-benefits-verification.jpg",
   benefits: [
     { title: "No Coverage Surprises", description: "Every benefit detail confirmed before the visit — deductibles, co-insurance, exclusions and plan limits." },
     { title: "Improved Patient Experience", description: "Patients know their financial responsibility upfront, reducing billing disputes and improving satisfaction." },
