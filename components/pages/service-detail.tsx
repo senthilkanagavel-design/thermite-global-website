@@ -112,7 +112,7 @@ export function ServiceDetailPage({
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-secondary py-12">
+      <section className="bg-secondary py-6">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {stats.map((stat, index) => (
@@ -140,7 +140,7 @@ export function ServiceDetailPage({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-5"
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Benefits</span>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">
@@ -169,7 +169,7 @@ export function ServiceDetailPage({
       {/* Features */}
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -219,7 +219,7 @@ export function ServiceDetailPage({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-5"
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Process</span>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">
