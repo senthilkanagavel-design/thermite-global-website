@@ -21,7 +21,7 @@ export function Hero() {
         <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-t from-accent/5 to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 py-20 lg:py-32">
+      <div className="container mx-auto px-4 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <motion.div

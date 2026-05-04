@@ -40,7 +40,7 @@ const benefits = [
 
 export function About() {
   return (
-    <section className="py-20 lg:py-28 bg-muted/30">
+    <section className="py-12 lg:py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image Side */}
@@ -124,7 +124,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-20"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12"
         >
           {highlights.map((item, index) => (
             <motion.div

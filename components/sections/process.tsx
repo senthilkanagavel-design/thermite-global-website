@@ -38,7 +38,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="py-20 lg:py-28 bg-muted/30">
+    <section className="py-12 lg:py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -46,7 +46,7 @@ export function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-10"
         >
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Process</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-2 mb-4">
