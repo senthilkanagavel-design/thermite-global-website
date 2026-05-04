@@ -1,50 +1,56 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ClipboardCheck, FileSearch, Send, DollarSign, FileText, Users, BarChart3, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 const steps = [
   {
-    icon: ClipboardCheck,
     step: "01",
+    emoji: "📋",
     title: "Patient Registration",
-    description: "Demographics, insurance capture and real-time eligibility verification.",
+    description: "Eligibility & Demographic Entry",
   },
   {
-    icon: FileSearch,
     step: "02",
-    title: "Charge Capture & Coding",
-    description: "ICD-10, CPT and HCPCS coding with 99% accuracy for maximum reimbursement.",
+    emoji: "🔬",
+    title: "Coding & Charge Capture",
+    description: "CPT, ICD-10, Modifier & Linking",
   },
   {
-    icon: Send,
     step: "03",
+    emoji: "📤",
     title: "Claim Submission",
-    description: "Clean claims submitted electronically with automated scrubbing.",
+    description: "Clean Claim & Scrubbing",
   },
   {
-    icon: DollarSign,
     step: "04",
-    title: "Payment Posting",
-    description: "ERA/EOB processing, payment reconciliation and variance identification.",
+    emoji: "🏦",
+    title: "Clearinghouse Accept / Reject",
+    description: "Clean Claim to Payer & Rework",
   },
   {
-    icon: FileText,
     step: "05",
-    title: "Patient Statements",
-    description: "Accurate patient billing, statements and self-pay collections.",
+    emoji: "💳",
+    title: "Payment & Denial Posting",
+    description: "ERA / EOB / Reconciliation",
   },
   {
-    icon: Users,
     step: "06",
-    title: "AR Follow-up",
-    description: "Proactive payer follow-up on unpaid and underpaid claims.",
+    emoji: "🔄",
+    title: "Denial Management",
+    description: "Fix Issue & Resubmission",
   },
   {
-    icon: BarChart3,
     step: "07",
-    title: "Denial Management",
-    description: "Root cause analysis, appeals and denial prevention strategies.",
+    emoji: "📞",
+    title: "AR Follow-up",
+    description: "NDNP & Aged Claims Action",
+  },
+  {
+    step: "08",
+    emoji: "🧾",
+    title: "Patient Statement",
+    description: "Outstanding Due & Collections",
   },
 ]
 
@@ -65,91 +71,52 @@ export function Process() {
             End-to-End Revenue Cycle Workflow
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed">
-            A complete, closed-loop process from patient registration through collections — every step connected, nothing falling through the cracks.
+            A complete 8-step process from patient registration through collections — every step connected, nothing falling through the cracks.
           </p>
         </motion.div>
 
-        {/* Row 1: Steps 01–04 */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          {steps.slice(0, 4).map((step, index) => (
-            <motion.div
-              key={step.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="relative flex md:flex-col items-start md:items-center gap-4 md:gap-0 bg-card border border-border rounded-xl p-5 hover:shadow-md hover:border-secondary/30 transition-all"
-            >
-              <div className="relative flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-secondary/10 border-2 border-secondary flex items-center justify-center">
-                  <step.icon className="h-5 w-5 text-secondary" />
+        {/* Steps */}
+        <div className="flex items-stretch gap-0 overflow-x-auto pb-2">
+          {steps.map((step, index) => (
+            <div key={step.step} className="flex items-center flex-shrink-0">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.07 }}
+                className="flex flex-col items-center text-center bg-card border border-border rounded-xl p-4 hover:border-secondary/50 hover:shadow-md transition-all duration-300 w-[118px]"
+              >
+                {/* Step number */}
+                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center mb-3 flex-shrink-0">
+                  <span className="text-[10px] font-bold text-accent-foreground">{step.step}</span>
                 </div>
-                <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-accent text-accent-foreground text-[10px] font-bold flex items-center justify-center">
-                  {step.step}
-                </span>
-              </div>
-              <div className="md:text-center md:mt-4">
-                <h3 className="text-sm font-bold text-primary mb-1">{step.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{step.description}</p>
-              </div>
-              {index < 3 && (
-                <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-card border border-secondary/40 rounded-full items-center justify-center shadow-sm">
-                  <ArrowRight className="h-3 w-3 text-secondary" />
+                {/* Emoji icon */}
+                <div className="text-2xl mb-3 leading-none">{step.emoji}</div>
+                {/* Title */}
+                <p className="text-xs font-semibold text-primary leading-snug mb-1.5">{step.title}</p>
+                {/* Description */}
+                <p className="text-[10px] text-muted-foreground leading-snug">{step.description}</p>
+              </motion.div>
+
+              {/* Arrow connector */}
+              {index < steps.length - 1 && (
+                <div className="flex items-center px-1 flex-shrink-0 pt-4">
+                  <ArrowRight className="h-3.5 w-3.5 text-secondary/60" />
                 </div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        {/* Down arrow connector */}
-        <div className="hidden md:flex justify-end pr-[12.5%] my-0">
-          <div className="flex flex-col items-center">
-            <div className="w-px h-4 bg-secondary/40" />
-            <ArrowRight className="h-3 w-3 text-secondary/60 rotate-90" />
-          </div>
-        </div>
-
-        {/* Row 2: Steps 05–07, right-aligned (reverse flow) */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4 md:mt-0">
-          <div className="hidden md:block" />
-          {steps.slice(4).map((step, index) => (
-            <motion.div
-              key={step.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-              className="relative flex md:flex-col items-start md:items-center gap-4 md:gap-0 bg-card border border-border rounded-xl p-5 hover:shadow-md hover:border-secondary/30 transition-all"
-            >
-              <div className="relative flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-secondary/10 border-2 border-secondary flex items-center justify-center">
-                  <step.icon className="h-5 w-5 text-secondary" />
-                </div>
-                <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-accent text-accent-foreground text-[10px] font-bold flex items-center justify-center">
-                  {step.step}
-                </span>
-              </div>
-              <div className="md:text-center md:mt-4">
-                <h3 className="text-sm font-bold text-primary mb-1">{step.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{step.description}</p>
-              </div>
-              {index < 2 && (
-                <div className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-card border border-secondary/40 rounded-full items-center justify-center shadow-sm">
-                  <ArrowRight className="h-3 w-3 text-secondary rotate-180" />
-                </div>
-              )}
-            </motion.div>
-          ))}
-        </div>
-
+        {/* Cycle note */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-center text-xs text-muted-foreground mt-6"
+          className="text-center text-[11px] text-muted-foreground uppercase tracking-widest mt-5"
         >
-          Every step is monitored, measured and optimised for maximum collections.
+          ↻ Continuous Revenue Cycle
         </motion.p>
       </div>
     </section>
