@@ -84,7 +84,7 @@ export function ServiceDetailPage({
                   </Button>
                 </Link>
                 <Link href="/services">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8">
+                  <Button size="lg" variant="outline" className="border-white/60 text-white bg-white/10 hover:bg-white/20 font-semibold px-8">
                     View All Services
                   </Button>
                 </Link>
