@@ -58,9 +58,9 @@ export function ServiceDetailPage({
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-8 lg:py-12">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-8 lg:py-12 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -95,14 +95,14 @@ export function ServiceDetailPage({
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className="relative w-full min-w-0"
             >
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src={image}
                   alt={title}
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   priority
                 />
               </div>
