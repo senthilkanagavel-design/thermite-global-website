@@ -4,10 +4,24 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, CheckCircle2, type LucideIcon } from "lucide-react"
+import { ArrowRight, CheckCircle2, TrendingUp, FileText, Code, DollarSign, ShieldCheck, BarChart2, Users, Settings, Receipt, FileCode2, CreditCard } from "lucide-react"
+
+const iconMap: Record<string, React.ElementType> = {
+  TrendingUp,
+  FileText,
+  Code,
+  DollarSign,
+  ShieldCheck,
+  BarChart2,
+  Users,
+  Settings,
+  Receipt,
+  FileCode2,
+  CreditCard,
+}
 
 interface ServiceDetailProps {
-  icon: LucideIcon
+  iconName?: string
   title: string
   subtitle: string
   description: string
@@ -29,7 +43,7 @@ interface ServiceDetailProps {
 }
 
 export function ServiceDetailPage({
-  icon: Icon,
+  iconName,
   title,
   subtitle,
   description,
@@ -39,6 +53,8 @@ export function ServiceDetailPage({
   process,
   stats,
 }: ServiceDetailProps) {
+  const Icon = (iconName && iconMap[iconName]) ? iconMap[iconName] : TrendingUp
+
   return (
     <>
       {/* Hero Section */}

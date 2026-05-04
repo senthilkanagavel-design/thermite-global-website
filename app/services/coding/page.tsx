@@ -1,7 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ServiceDetailPage } from "@/components/pages/service-detail"
-import { FileCode2 } from "lucide-react"
 
 export const metadata = {
   title: "Medical Coding Services | Thermite Global Solutions",
@@ -9,7 +8,7 @@ export const metadata = {
 }
 
 const serviceData = {
-  icon: FileCode2,
+  iconName: "FileCode2",
   title: "Medical Coding",
   subtitle: "Expert Coding Services",
   description: "Our team of certified coders delivers accurate, compliant coding across all specialties. We maximize your reimbursement while ensuring full compliance with payer requirements and regulatory guidelines.",

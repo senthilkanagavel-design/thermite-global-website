@@ -1,7 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ServiceDetailPage } from "@/components/pages/service-detail"
-import { CreditCard } from "lucide-react"
 
 export const metadata = {
   title: "Complete RCM Solutions | Thermite Global Solutions",
@@ -9,7 +8,7 @@ export const metadata = {
 }
 
 const serviceData = {
-  icon: CreditCard,
+  iconName: "CreditCard",
   title: "Complete RCM Solutions",
   subtitle: "End-to-End Revenue Cycle Management",
   description: "Our comprehensive revenue cycle management services handle every aspect of your billing operations, from patient registration to final payment collection. We integrate seamlessly with your practice to maximize collections and minimize administrative burden.",

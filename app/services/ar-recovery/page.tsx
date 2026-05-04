@@ -1,7 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ServiceDetailPage } from "@/components/pages/service-detail"
-import { TrendingUp } from "lucide-react"
 
 export const metadata = {
   title: "AR Recovery Services | Thermite Global Solutions",
@@ -9,7 +8,7 @@ export const metadata = {
 }
 
 const serviceData = {
-  icon: TrendingUp,
+  iconName: "TrendingUp",
   title: "AR Recovery",
   subtitle: "Accounts Receivable Management",
   description: "Our aggressive AR recovery services maximize collections on aged claims and improve your overall financial performance. We specialize in recovering revenue that other billing companies leave on the table.",

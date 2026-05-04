@@ -1,7 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ServiceDetailPage } from "@/components/pages/service-detail"
-import { Receipt } from "lucide-react"
 
 export const metadata = {
   title: "Medical Billing Services | Thermite Global Solutions",
@@ -9,7 +8,7 @@ export const metadata = {
 }
 
 const serviceData = {
-  icon: Receipt,
+  iconName: "Receipt",
   title: "Medical Billing",
   subtitle: "Comprehensive Billing Solutions",
   description: "Our end-to-end billing services streamline your revenue cycle from claim creation to payment posting. We handle the complexities of medical billing so you can focus on patient care.",
