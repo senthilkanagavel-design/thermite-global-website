@@ -70,8 +70,8 @@ const capabilities = [
   },
   {
     icon: Lock,
-    title: "SOC 2 Type II Certified",
-    description: "Independently audited security controls you can present to your compliance and legal teams with confidence.",
+    title: "HIPAA-Grade Compliance",
+    description: "Independently reviewed security controls, BAAs on file, and full audit trails — everything your compliance team needs.",
   },
   {
     icon: Clock,

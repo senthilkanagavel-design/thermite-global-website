@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const certifications = [
   { name: "HIPAA Compliant", abbr: "HIPAA" },
-  { name: "SOC 2 Type II", abbr: "SOC 2" },
+  { name: "HIPAA Compliant", abbr: "HIPAA" },
   { name: "AAPC Member", abbr: "AAPC" },
   { name: "AHIMA Member", abbr: "AHIMA" },
   { name: "HBMA Member", abbr: "HBMA" },

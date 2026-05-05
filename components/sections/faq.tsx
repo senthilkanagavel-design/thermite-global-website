@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "How do you ensure HIPAA compliance?",
-    answer: "We maintain strict HIPAA compliance through comprehensive security measures including encrypted data transmission, secure facilities, regular security audits, employee training, and business associate agreements. We are also SOC 2 Type II certified.",
+    answer: "We maintain strict HIPAA compliance through comprehensive security measures including encrypted data transmission, secure facilities, regular security audits, employee training, and business associate agreements.",
   },
   {
     question: "What EHR/PM systems do you integrate with?",

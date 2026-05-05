@@ -20,7 +20,7 @@ const reasons = [
   {
     icon: Shield,
     title: "HIPAA Compliant",
-    description: "Enterprise-grade security with SOC 2 Type II certification, ensuring your patient data is always protected.",
+    description: "Enterprise-grade security with full HIPAA compliance, ensuring your patient data is always protected.",
   },
   {
     icon: Users,

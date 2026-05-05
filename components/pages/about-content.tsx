@@ -48,7 +48,6 @@ const stats = [
 
 const certifications = [
   "HIPAA Compliant",
-  "SOC 2 Type II Certified",
   "AAPC Certified Coders",
   "AHIMA Certified Specialists",
   "ISO 27001 Certified",
