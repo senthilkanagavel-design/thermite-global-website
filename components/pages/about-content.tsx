@@ -50,7 +50,6 @@ const certifications = [
   "HIPAA Compliant",
   "AAPC Certified Coders",
   "AHIMA Certified Specialists",
-  "ISO 27001 Certified",
   "HBMA Member",
 ]
 
