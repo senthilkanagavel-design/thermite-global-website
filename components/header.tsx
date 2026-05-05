@@ -119,18 +119,18 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             <Image
               src="/tgs-logo-transparent.png"
               alt="Thermite Global Solutions"
               width={100}
               height={100}
-              className="h-16 w-auto object-contain"
+              className="h-12 sm:h-16 w-auto object-contain"
               priority
             />
-            <div className="hidden sm:flex flex-col leading-tight border-l border-white/20 pl-3">
-              <span className="text-white font-semibold text-base tracking-wide">Thermite Global Solutions</span>
-              <span className="text-amber-400 text-xs tracking-widest uppercase">Revenue Cycle. Reimagined.</span>
+            <div className="flex flex-col leading-tight border-l border-white/20 pl-2 sm:pl-3">
+              <span className="text-white font-semibold text-xs sm:text-base tracking-wide">Thermite Global Solutions</span>
+              <span className="text-amber-400 text-[9px] sm:text-xs tracking-widest uppercase">Revenue Cycle. Reimagined.</span>
             </div>
           </Link>
 
