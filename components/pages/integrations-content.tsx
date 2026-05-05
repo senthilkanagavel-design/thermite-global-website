@@ -162,7 +162,7 @@ export function IntegrationsPageContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-xl border border-border p-6 hover:shadow-lg transition-shadow"
+                className="bg-card rounded-xl border border-border p-5 hover:shadow-lg transition-shadow"
               >
                 <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-secondary" />

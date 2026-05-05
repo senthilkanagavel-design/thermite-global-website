@@ -186,7 +186,7 @@ export function TechnologyPageContent() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-5">
             {platformFeatures.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -194,13 +194,13 @@ export function TechnologyPageContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-xl border border-border p-8 hover:shadow-lg transition-all hover:border-secondary/30 group"
+                className="bg-card rounded-xl border border-border p-5 hover:shadow-lg transition-all hover:border-secondary/30 group"
               >
-                <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center mb-6">
-                  <feature.icon className="h-7 w-7 text-secondary" />
+                <div className="w-11 h-11 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
+                  <feature.icon className="h-5 w-5 text-secondary" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">{feature.description}</p>
+                <h3 className="text-lg font-bold text-primary mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{feature.description}</p>
                 <ul className="space-y-2 mb-8">
                   {feature.highlights.map((h) => (
                     <li key={h} className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -240,7 +240,7 @@ export function TechnologyPageContent() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {workflow.map((step, index) => (
               <motion.div
                 key={step.step}
