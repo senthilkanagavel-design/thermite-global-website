@@ -114,7 +114,7 @@ export function TechnologyPageContent() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-8 lg:py-16">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-8 lg:py-10">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -123,10 +123,10 @@ export function TechnologyPageContent() {
             className="text-center max-w-4xl mx-auto"
           >
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Platform</span>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mt-2 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mt-2 mb-4">
               Technology Built for Revenue Cycle
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-6">
               We built our platform from the ground up for healthcare RCM — not adapted from generic BI tools. Every feature exists to get claims paid faster, reduce denials, and give your team complete visibility.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -137,7 +137,7 @@ export function TechnologyPageContent() {
                 </Button>
               </Link>
               <Link href="/technology/integrations">
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8">
+                <Button size="lg" className="bg-white text-[#0a1628] hover:bg-white/90 font-semibold px-8">
                   View Integrations
                 </Button>
               </Link>
@@ -168,7 +168,7 @@ export function TechnologyPageContent() {
       </section>
 
       {/* Platform Features */}
-      <section className="py-16 bg-background">
+      <section className="py-10 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -222,7 +222,7 @@ export function TechnologyPageContent() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-10 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -265,7 +265,7 @@ export function TechnologyPageContent() {
       </section>
 
       {/* Core Capabilities */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      <section className="py-10 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -305,7 +305,7 @@ export function TechnologyPageContent() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-secondary">
+      <section className="py-10 bg-secondary">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

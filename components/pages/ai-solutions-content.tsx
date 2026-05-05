@@ -78,7 +78,7 @@ export function AISolutionsPageContent() {
       </div>
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-12 lg:py-16">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-8 lg:py-10">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -92,10 +92,10 @@ export function AISolutionsPageContent() {
               </div>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">AI-Powered Solutions</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
               Stop Denials Before They Happen
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8 max-w-2xl">
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-6 max-w-2xl">
               Our machine learning models don't just report on what went wrong — they intervene before a claim leaves your system, predict what payers will reject, and continuously learn from every outcome.
             </p>
             <Link href="/contact">
@@ -130,7 +130,7 @@ export function AISolutionsPageContent() {
       </section>
 
       {/* AI Features */}
-      <section className="py-16 bg-background">
+      <section className="py-10 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -170,7 +170,7 @@ export function AISolutionsPageContent() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-secondary">
+      <section className="py-10 bg-secondary">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -182,7 +182,7 @@ export function AISolutionsPageContent() {
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
               Put AI to Work on Your Claims
             </h2>
-            <p className="text-lg text-secondary-foreground/80 mb-8">
+            <p className="text-lg text-secondary-foreground/80 mb-6">
               Most clients see measurable denial reduction within the first 30 days. Let's show you what that looks like for your payer mix.
             </p>
             <Link href="/contact">

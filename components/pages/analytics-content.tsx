@@ -78,7 +78,7 @@ export function AnalyticsPageContent() {
       </div>
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-12 lg:py-16">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary py-8 lg:py-10">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -92,10 +92,10 @@ export function AnalyticsPageContent() {
               </div>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">Analytics Dashboard</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
               See Everything. Miss Nothing.
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8 max-w-2xl">
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-6 max-w-2xl">
               Your revenue cycle generates thousands of data points every day. Our analytics dashboard turns that noise into a clear, actionable picture — updated in real time, accessible from anywhere.
             </p>
             <Link href="/contact">
@@ -130,7 +130,7 @@ export function AnalyticsPageContent() {
       </section>
 
       {/* Features */}
-      <section className="py-16 bg-background">
+      <section className="py-10 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -170,7 +170,7 @@ export function AnalyticsPageContent() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-secondary">
+      <section className="py-10 bg-secondary">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -182,7 +182,7 @@ export function AnalyticsPageContent() {
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
               Ready for Full Visibility?
             </h2>
-            <p className="text-lg text-secondary-foreground/80 mb-8">
+            <p className="text-lg text-secondary-foreground/80 mb-6">
               Schedule a live walkthrough of the analytics dashboard with your actual metrics and workflows in mind.
             </p>
             <Link href="/contact">
