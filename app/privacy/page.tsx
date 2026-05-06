@@ -41,7 +41,7 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-xl font-bold text-primary mb-2">1. Who We Are</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Thermite Global Solutions LLC is a limited liability company organised under the laws of the United States. We operate as a Business Associate (as defined under HIPAA) to our healthcare provider clients. Our operational and processing teams are located in India, and all client engagements explicitly disclose this arrangement. Our cross-border data handling practices are governed by our Business Associate Agreements and applicable US law.
+                Thermite Global Solutions is a company registered and operating in Chennai, Tamil Nadu, India, providing outsourced revenue cycle management services to healthcare providers across the United States. We operate as a Business Associate (as defined under HIPAA) to our healthcare provider clients. Our operational and processing teams are located in India, and all client engagements explicitly disclose this arrangement. Our cross-border data handling practices are governed by our Business Associate Agreements and applicable US law.
               </p>
             </div>
 
