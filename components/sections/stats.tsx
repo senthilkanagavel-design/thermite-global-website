@@ -1,10 +1,14 @@
 "use client"
 
-import { motion, useMotionValue, useTransform, animate } from "framer-motion"
+import { motion, animate } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import { useInView } from "framer-motion"
 
-const stats = [
+type StatItem =
+  | { isText: true; textValue: string; label: string; description: string; value?: never; suffix?: never; prefix?: never }
+  | { isText?: false; value: number; suffix: string; label: string; description: string; prefix?: string; textValue?: never }
+
+const stats: StatItem[] = [
   {
     value: 98,
     suffix: "%",
@@ -51,9 +55,7 @@ function AnimatedCounter({ value, suffix, prefix }: { value: number; suffix: str
 
   return (
     <span ref={ref} className="tabular-nums">
-      {prefix}
-      {displayValue}
-      {suffix}
+      {prefix}{displayValue}{suffix}
     </span>
   )
 }
@@ -61,14 +63,12 @@ function AnimatedCounter({ value, suffix, prefix }: { value: number; suffix: str
 export function Stats() {
   return (
     <section className="py-6 bg-primary relative overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,6 @@ export function Stats() {
           </h2>
         </motion.div>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
           {stats.map((stat, index) => (
             <motion.div
@@ -94,10 +93,10 @@ export function Stats() {
               className="text-center"
             >
               <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
-                {stat.isText ? (
+                {stat.isText === true ? (
                   <span>{stat.textValue}</span>
                 ) : (
-                  <AnimatedCounter value={stat.value!} suffix={stat.suffix!} prefix={stat.prefix} />
+                  <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
                 )}
               </div>
               <h3 className="text-lg md:text-xl font-semibold text-primary-foreground mb-1">
