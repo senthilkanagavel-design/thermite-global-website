@@ -87,7 +87,7 @@ function ServicesDropdown() {
   const [activeGroup, setActiveGroup] = useState<string | null>(null)
 
   return (
-    <div className="bg-[#0d1f3c] rounded-lg shadow-2xl border border-white/10 py-2 min-w-[220px]">
+    <div className="bg-[#0d1f3c] rounded-lg shadow-2xl border border-white/10 py-2 min-w-[260px]">
       {servicesNav.groups.map((group) => (
         <div
           key={group.label}
