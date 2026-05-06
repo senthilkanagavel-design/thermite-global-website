@@ -55,6 +55,7 @@ const simpleNavItems = [
     name: "About",
     href: "/about",
     items: [
+      { name: "Why TGS", href: "/about/why-tgs" },
       { name: "About Us", href: "/about" },
       { name: "Leadership", href: "/about/leadership" },
       { name: "Careers", href: "/about/careers" },

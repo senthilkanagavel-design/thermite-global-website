@@ -20,6 +20,7 @@ const footerLinks = {
     { name: "Behavioral Health", href: "/specialties/behavioral-health" },
   ],
   company: [
+    { name: "Why TGS", href: "/about/why-tgs" },
     { name: "About Us", href: "/about" },
     { name: "Leadership", href: "/about/leadership" },
     { name: "Careers", href: "/about/careers" },
