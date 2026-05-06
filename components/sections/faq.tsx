@@ -29,7 +29,6 @@ const faqs = [
     answer: "We maintain strict HIPAA compliance through comprehensive security measures including encrypted data transmission, secure facilities, regular security audits, employee training, and business associate agreements. ",
   },
   {
-  {
     question: "How do you handle claim denials?",
     answer: "Our denial management team analyzes each denial to identify root causes, corrects issues, and resubmits claims promptly. We also implement proactive denial prevention strategies by identifying patterns and addressing issues before they result in denials.",
   },
