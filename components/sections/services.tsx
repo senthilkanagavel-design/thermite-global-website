@@ -13,79 +13,70 @@ import {
   BarChart2,
   DollarSign,
   Users,
+  CheckCircle,
   ArrowRight
 } from "lucide-react"
 
 const services = [
   {
+    icon: CreditCard,
+    title: "Complete RCM",
+    description: "End-to-end revenue cycle management from patient registration to final payment.",
+    href: "/services/rcm",
+  },
+  {
     icon: FileCode2,
     title: "Medical Coding",
-    description: "Expert ICD-10, CPT, and HCPCS coding services with 99% accuracy rate. Our certified coders ensure proper code selection for maximum reimbursement.",
+    description: "ICD-10, CPT and HCPCS coding with 99% accuracy across all specialties.",
     href: "/services/coding",
-    features: ["ICD-10 Coding", "CPT Coding", "HCPCS Coding", "Code Auditing"],
   },
   {
     icon: Receipt,
     title: "Medical Billing",
-    description: "End-to-end billing solutions that accelerate cash flow and reduce days in AR. We handle claims submission, follow-up, and appeals.",
+    description: "Clean claim submission, follow-up and appeals to accelerate cash flow.",
     href: "/services/billing",
-    features: ["Claim Submission", "Payment Posting", "Patient Billing", "Statement Generation"],
   },
   {
     icon: TrendingUp,
     title: "AR Recovery",
-    description: "Aggressive accounts receivable management to recover aged claims and improve your bottom line with proven collection strategies.",
+    description: "Aged claim recovery and payer follow-up to maximise collections.",
     href: "/services/ar-recovery",
-    features: ["Aged AR Analysis", "Denial Appeals", "Collections", "Payer Follow-up"],
-  },
-  {
-    icon: Shield,
-    title: "Insurance Verification",
-    description: "Real-time eligibility verification and benefits analysis to prevent claim denials and ensure accurate patient responsibility estimates.",
-    href: "/services/insurance-verification",
-    features: ["Eligibility Checks", "Benefits Verification", "Coverage Analysis", "Real-time Updates"],
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Prior Authorization",
-    description: "Streamlined prior authorization process to reduce delays and improve approval rates for procedures and medications.",
-    href: "/services/prior-authorization",
-    features: ["Auth Submission", "Status Tracking", "Appeal Management", "Denial Prevention"],
-  },
-  {
-    icon: CreditCard,
-    title: "Complete RCM",
-    description: "Full-service revenue cycle management from patient scheduling to final payment. One partner for your entire revenue cycle needs.",
-    href: "/services/rcm",
-    features: ["End-to-End RCM", "Analytics Dashboard", "Performance Reports", "Dedicated Support"],
   },
   {
     icon: BarChart2,
     title: "Denial Management",
-    description: "Expert denial analysis, appeals and root cause resolution to recover revenue and prevent recurring denials.",
+    description: "Root cause analysis, appeals and denial prevention strategies.",
     href: "/services/denial-management",
-    features: ["Denial Categorisation", "Appeal Preparation", "Root Cause Analysis", "Prevention Strategies"],
+  },
+  {
+    icon: Shield,
+    title: "Insurance Verification",
+    description: "Real-time eligibility and benefits verification before every visit.",
+    href: "/services/insurance-verification",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Prior Authorization",
+    description: "Auth submission, tracking and follow-up to reduce treatment delays.",
+    href: "/services/prior-authorization",
   },
   {
     icon: DollarSign,
     title: "Payment Posting",
-    description: "Accurate same-day payment posting, ERA/EOB reconciliation and variance identification to keep your AR clean.",
+    description: "Same-day ERA/EOB posting, reconciliation and variance identification.",
     href: "/services/payment-posting",
-    features: ["ERA Automation", "EOB Posting", "Reconciliation", "Variance Follow-up"],
   },
   {
     icon: Users,
-    title: "Provider Credentialing",
-    description: "Complete provider enrollment and re-credentialing management so your providers can bill without delays.",
+    title: "Credentialing",
+    description: "Provider enrollment and re-credentialing across all payers.",
     href: "/services/credentialing",
-    features: ["Payer Enrollment", "CAQH Maintenance", "Re-credentialing", "Status Tracking"],
   },
   {
-    icon: Shield,
+    icon: CheckCircle,
     title: "Benefits Verification",
-    description: "Comprehensive benefits analysis confirming coverage, co-pays, deductibles and authorisation requirements before every visit.",
+    description: "Coverage, co-pay and deductible confirmation before every encounter.",
     href: "/services/benefits-verification",
-    features: ["Benefits Breakdown", "Deductible Tracking", "Co-pay Confirmation", "Patient Estimates"],
   },
 ]
 
@@ -93,62 +84,55 @@ export function Services() {
   return (
     <section className="py-6 lg:py-10 bg-background">
       <div className="container mx-auto px-4">
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-5"
+          className="text-center max-w-3xl mx-auto mb-6"
         >
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Services</span>
           <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-3">
             Comprehensive RCM Solutions
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed">
-            From coding to collections, we provide end-to-end revenue cycle management services tailored to your practice needs.
+            From coding to collections — end-to-end revenue cycle management tailored to your practice.
           </p>
         </motion.div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* 5-column 2-row grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
             >
               <Link href={service.href} className="group block h-full">
-                <div className="h-full bg-card rounded-xl border border-border p-5 hover:shadow-lg hover:border-secondary/30 transition-all duration-300">
+                <div className="h-full bg-card rounded-xl border border-border p-4 hover:shadow-md hover:border-secondary/40 transition-all duration-300 flex flex-col">
                   {/* Icon */}
-                  <div className="w-11 h-11 rounded-lg bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-3 group-hover:bg-secondary transition-all duration-300 flex-shrink-0">
                     <service.icon className="h-5 w-5 text-secondary group-hover:text-secondary-foreground transition-colors" />
                   </div>
 
-                  {/* Content */}
-                  <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
+                  {/* Title */}
+                  <h3 className="text-sm font-bold text-primary mb-1.5 group-hover:text-secondary transition-colors leading-snug">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+
+                  {/* Description */}
+                  <p className="text-xs text-muted-foreground leading-relaxed flex-1">
                     {service.description}
                   </p>
 
-                  {/* Features */}
-                  <ul className="space-y-1.5 mb-4">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-sm text-foreground/70">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Link */}
-                  <div className="flex items-center gap-2 text-secondary text-sm font-medium group-hover:gap-3 transition-all">
+                  {/* Learn More */}
+                  <div className="flex items-center gap-1 text-secondary text-xs font-medium mt-3 group-hover:gap-2 transition-all">
                     Learn More
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-3 w-3" />
                   </div>
                 </div>
               </Link>
@@ -171,6 +155,7 @@ export function Services() {
             </Button>
           </Link>
         </motion.div>
+
       </div>
     </section>
   )
