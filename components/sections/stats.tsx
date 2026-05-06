@@ -23,7 +23,7 @@ const stats: StatItem[] = [
   },
   {
     isText: true,
-    textValue: "Multi-Specialty",
+    textValue: "All Specialties",
     label: "Coverage",
     description: "Across all major specialties",
   },
@@ -82,7 +82,7 @@ export function Stats() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 items-start">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -94,7 +94,7 @@ export function Stats() {
             >
               <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
                 {stat.isText === true ? (
-                  <span>{stat.textValue}</span>
+                  <span className="text-3xl md:text-4xl">{stat.textValue}</span>
                 ) : (
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
                 )}

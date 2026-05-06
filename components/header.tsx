@@ -1,117 +1,157 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown, Menu, X, Phone, Mail } from "lucide-react"
+import { ChevronDown, ChevronRight, Menu, X, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const navigationItems = [
-  {
-    name: "Services",
-    href: "/services",
-    submenu: [
-      {
-        category: "Revenue Cycle Management",
-        items: [
-          { name: "Complete RCM Solutions", href: "/services/rcm", description: "End-to-end revenue cycle management" },
-          { name: "Medical Coding", href: "/services/coding", description: "ICD-10, CPT, and HCPCS coding services" },
-          { name: "Medical Billing", href: "/services/billing", description: "Comprehensive billing solutions" },
-          { name: "AR Recovery", href: "/services/ar-recovery", description: "Accounts receivable management" },
-        ],
-      },
-      {
-        category: "Verification Services",
-        items: [
-          { name: "Insurance Verification", href: "/services/insurance-verification", description: "Real-time eligibility checks" },
-          { name: "Prior Authorization", href: "/services/prior-authorization", description: "Streamlined authorization process" },
-          { name: "Benefits Verification", href: "/services/benefits-verification", description: "Complete benefits analysis" },
-        ],
-      },
-      {
-        category: "Specialty Services",
-        items: [
-          { name: "Denial Management", href: "/services/denial-management", description: "Reduce and prevent claim denials" },
-          { name: "Payment Posting", href: "/services/payment-posting", description: "Accurate payment reconciliation" },
-          { name: "Credentialing", href: "/services/credentialing", description: "Provider enrollment services" },
-        ],
-      },
-    ],
-  },
+// ─── Navigation Data ───────────────────────────────────────────────────────
+
+const servicesNav = {
+  name: "Services",
+  href: "/services",
+  groups: [
+    {
+      label: "Revenue Cycle Management",
+      items: [
+        { name: "Complete RCM", href: "/services/rcm" },
+        { name: "Medical Coding", href: "/services/coding" },
+        { name: "Medical Billing", href: "/services/billing" },
+        { name: "AR Recovery", href: "/services/ar-recovery" },
+        { name: "Denial Management", href: "/services/denial-management" },
+        { name: "Payment Posting", href: "/services/payment-posting" },
+        { name: "Credentialing", href: "/services/credentialing" },
+      ],
+    },
+    {
+      label: "Verification Services",
+      items: [
+        { name: "Insurance Verification", href: "/services/insurance-verification" },
+        { name: "Prior Authorization", href: "/services/prior-authorization" },
+        { name: "Benefits Verification", href: "/services/benefits-verification" },
+      ],
+    },
+  ],
+}
+
+const simpleNavItems = [
   {
     name: "Specialties",
     href: "/specialties",
-    submenu: [
-      {
-        category: "Medical Specialties",
-        items: [
-          { name: "Cardiology", href: "/specialties/cardiology", description: "Heart and cardiovascular billing" },
-          { name: "Orthopedics", href: "/specialties/orthopedics", description: "Musculoskeletal services" },
-          { name: "Radiology", href: "/specialties/radiology", description: "Imaging and diagnostic billing" },
-          { name: "Anesthesiology", href: "/specialties/anesthesiology", description: "Anesthesia billing expertise" },
-        ],
-      },
-      {
-        category: "Healthcare Settings",
-        items: [
-          { name: "Hospital Billing", href: "/specialties/hospital", description: "Inpatient and outpatient billing" },
-          { name: "Physician Groups", href: "/specialties/physician-groups", description: "Multi-specialty practices" },
-          { name: "Urgent Care", href: "/specialties/urgent-care", description: "Fast-paced clinic billing" },
-          { name: "Behavioral Health", href: "/specialties/behavioral-health", description: "Mental health services" },
-        ],
-      },
+    items: [
+      { name: "Cardiology", href: "/specialties/cardiology" },
+      { name: "Orthopedics", href: "/specialties/orthopedics" },
+      { name: "Radiology", href: "/specialties/radiology" },
+      { name: "Anesthesiology", href: "/specialties/anesthesiology" },
+      { name: "Hospital Billing", href: "/specialties/hospital" },
+      { name: "Physician Groups", href: "/specialties/physician-groups" },
+      { name: "Urgent Care", href: "/specialties/urgent-care" },
+      { name: "Behavioral Health", href: "/specialties/behavioral-health" },
     ],
   },
   {
     name: "Technology",
     href: "/technology",
-    submenu: [
-      {
-        category: "Our Platform",
-        items: [
-          { name: "Analytics Dashboard", href: "/technology/analytics", description: "Real-time performance insights" },
-          { name: "AI-Powered Solutions", href: "/technology/ai-solutions", description: "Machine learning optimization" },
-          { name: "Integration Hub", href: "/technology/integrations", description: "EHR and PM system connectivity" },
-        ],
-      },
+    items: [
+      { name: "Platform Overview", href: "/technology" },
+      { name: "Analytics Dashboard", href: "/technology#analytics" },
+      { name: "AI-Powered Workflows", href: "/technology#ai" },
     ],
   },
   {
     name: "About",
     href: "/about",
-    submenu: [
-      {
-        category: "Our Company",
-        items: [
-          { name: "About Us", href: "/about", description: "Our mission and values" },
-          { name: "Leadership Team", href: "/about/leadership", description: "Meet our executives" },
-          { name: "Careers", href: "/about/careers", description: "Join our growing team" },
-          { name: "Global Presence", href: "/about/global", description: "Our worldwide operations" },
-        ],
-      },
+    items: [
+      { name: "About Us", href: "/about" },
+      { name: "Leadership", href: "/about/leadership" },
+      { name: "Careers", href: "/about/careers" },
     ],
   },
   {
     name: "Resources",
     href: "/resources",
-    submenu: [
-      {
-        category: "Learn More",
-        items: [
-          { name: "Blog", href: "/resources/blog", description: "Industry insights and updates" },
-          { name: "Case Studies", href: "/resources/case-studies", description: "Client success stories" },
-          { name: "Whitepapers", href: "/resources/whitepapers", description: "In-depth research reports" },
-          { name: "FAQ", href: "/resources/faq", description: "Common questions answered" },
-        ],
-      },
+    items: [
+      { name: "Blog", href: "/resources/blog" },
+      { name: "Case Studies", href: "/resources/case-studies" },
     ],
   },
 ]
 
+// ─── Dropdown link style ───────────────────────────────────────────────────
+const dropLink = "block px-3 py-1.5 text-sm text-white/70 hover:text-amber-400 hover:bg-white/5 rounded transition-colors whitespace-nowrap"
+
+// ─── Services Nested Dropdown ──────────────────────────────────────────────
+function ServicesDropdown() {
+  const [activeGroup, setActiveGroup] = useState<string | null>(null)
+
+  return (
+    <div className="bg-[#0d1f3c] rounded-lg shadow-2xl border border-white/10 py-2 min-w-[220px]">
+      {servicesNav.groups.map((group) => (
+        <div
+          key={group.label}
+          className="relative"
+          onMouseEnter={() => setActiveGroup(group.label)}
+          onMouseLeave={() => setActiveGroup(null)}
+        >
+          <button className="flex items-center justify-between w-full px-4 py-2 text-sm font-semibold text-amber-400 hover:bg-white/5 transition-colors gap-8">
+            {group.label}
+            <ChevronRight className="h-3.5 w-3.5 flex-shrink-0" />
+          </button>
+
+          <AnimatePresence>
+            {activeGroup === group.label && (
+              <motion.div
+                initial={{ opacity: 0, x: -4 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -4 }}
+                transition={{ duration: 0.15 }}
+                className="absolute left-full top-0 pl-1"
+              >
+                <div className="bg-[#0d1f3c] rounded-lg shadow-2xl border border-white/10 py-2 min-w-[200px]">
+                  {group.items.map((item) => (
+                    <Link key={item.name} href={item.href} className={dropLink}>
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// ─── Simple Dropdown ───────────────────────────────────────────────────────
+function SimpleDropdown({ items }: { items: { name: string; href: string }[] }) {
+  return (
+    <div className="bg-[#0d1f3c] rounded-lg shadow-2xl border border-white/10 py-2 min-w-[180px]">
+      {items.map((item) => (
+        <Link key={item.name} href={item.href} className={dropLink}>
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  )
+}
+
+// ─── Header ───────────────────────────────────────────────────────────────
 export function Header() {
   const [openMenu, setOpenMenu] = useState<string | null>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  const handleMouseEnter = (name: string) => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    setOpenMenu(name)
+  }
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setOpenMenu(null), 100)
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-[#0a1628] border-b border-white/10 shadow-lg">
@@ -134,60 +174,58 @@ export function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navigationItems.map((item) => (
-              <div
-                key={item.name}
-                className="relative"
-                onMouseEnter={() => setOpenMenu(item.name)}
-                onMouseLeave={() => setOpenMenu(null)}
-              >
-                <Link
-                  href={item.href}
-                  className="flex items-center gap-1 px-4 py-2 text-white/80 hover:text-amber-400 font-medium transition-colors text-sm"
-                >
-                  {item.name}
-                  {item.submenu && <ChevronDown className="h-3.5 w-3.5" />}
-                </Link>
 
+            {/* Services — nested */}
+            <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter("Services")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Link href={servicesNav.href} className="flex items-center gap-1 px-4 py-2 text-white/80 hover:text-amber-400 font-medium transition-colors text-sm">
+                Services <ChevronDown className="h-3.5 w-3.5" />
+              </Link>
+              <AnimatePresence>
+                {openMenu === "Services" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute top-full left-0 pt-2"
+                    onMouseEnter={() => handleMouseEnter("Services")}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <ServicesDropdown />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Simple dropdowns */}
+            {simpleNavItems.map((nav) => (
+              <div
+                key={nav.name}
+                className="relative"
+                onMouseEnter={() => handleMouseEnter(nav.name)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <Link href={nav.href} className="flex items-center gap-1 px-4 py-2 text-white/80 hover:text-amber-400 font-medium transition-colors text-sm">
+                  {nav.name} <ChevronDown className="h-3.5 w-3.5" />
+                </Link>
                 <AnimatePresence>
-                  {openMenu === item.name && item.submenu && (
+                  {openMenu === nav.name && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 pt-2"
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute top-full left-0 pt-2"
+                      onMouseEnter={() => handleMouseEnter(nav.name)}
+                      onMouseLeave={handleMouseLeave}
                     >
-                      <div className="bg-[#0d1f3c] rounded-lg shadow-2xl border border-white/10 p-6 min-w-[600px]">
-                        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-                          {item.submenu.map((category) => (
-                            <div key={category.category}>
-                              <h3 className="font-semibold text-amber-400 mb-3 text-xs uppercase tracking-widest">
-                                {category.category}
-                              </h3>
-                              <ul className="space-y-2">
-                                {category.items.map((subItem) => (
-                                  <li key={subItem.name}>
-                                    <Link
-                                      href={subItem.href}
-                                      className="group block p-2 rounded-md hover:bg-white/5 transition-colors"
-                                    >
-                                      <span className="font-medium text-white group-hover:text-amber-400 transition-colors text-sm">
-                                        {subItem.name}
-                                      </span>
-                                      <p className="text-xs text-white/50 mt-0.5">
-                                        {subItem.description}
-                                      </p>
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                      <SimpleDropdown items={nav.items} />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -195,13 +233,10 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right side — phone + CTA */}
+          {/* Right side */}
           <div className="hidden lg:flex items-center gap-4">
             <div className="h-8 w-px bg-white/20" />
-            <a
-              href="tel:+10000000000"
-              className="flex items-center gap-2 text-white/70 hover:text-amber-400 transition-colors text-sm"
-            >
+            <a href="tel:+10000000000" className="flex items-center gap-2 text-white/70 hover:text-amber-400 transition-colors text-sm">
               <Phone className="h-4 w-4 flex-shrink-0" />
               <span>+1 (000) 000-0000</span>
             </a>
@@ -213,17 +248,9 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-white" />
-            ) : (
-              <Menu className="h-6 w-6 text-white" />
-            )}
+          {/* Mobile button */}
+          <button className="lg:hidden p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
+            {mobileMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
           </button>
         </div>
       </div>
@@ -235,25 +262,44 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-white/10 bg-[#0a1628]"
+            className="lg:hidden border-t border-white/10 bg-[#0a1628] overflow-hidden"
           >
             <div className="container mx-auto px-4 py-4">
-              {navigationItems.map((item) => (
-                <MobileMenuItem key={item.name} item={item} />
+
+              {/* Services mobile */}
+              <MobileSection label="Services" href="/services">
+                {servicesNav.groups.map((group) => (
+                  <div key={group.label} className="mb-3">
+                    <p className="text-xs font-semibold text-amber-400 uppercase tracking-widest mb-1.5">{group.label}</p>
+                    {group.items.map((item) => (
+                      <Link key={item.name} href={item.href} className="block py-1 text-sm text-white/60 hover:text-amber-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </MobileSection>
+
+              {/* Simple nav mobile */}
+              {simpleNavItems.map((nav) => (
+                <MobileSection key={nav.name} label={nav.name} href={nav.href}>
+                  {nav.items.map((item) => (
+                    <Link key={item.name} href={item.href} className="block py-1 text-sm text-white/60 hover:text-amber-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                      {item.name}
+                    </Link>
+                  ))}
+                </MobileSection>
               ))}
+
               <div className="mt-4 pt-4 border-t border-white/10 space-y-3">
                 <a href="tel:+10000000000" className="flex items-center gap-2 text-white/60 text-sm">
-                  <Phone className="h-4 w-4" />
-                  <span>+1 (000) 000-0000</span>
+                  <Phone className="h-4 w-4" /><span>+1 (000) 000-0000</span>
                 </a>
                 <a href="mailto:test@thermiteglobal.com" className="flex items-center gap-2 text-white/60 text-sm">
-                  <Mail className="h-4 w-4" />
-                  <span>test@thermiteglobal.com</span>
+                  <Mail className="h-4 w-4" /><span>test@thermiteglobal.com</span>
                 </a>
                 <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  <Button className="w-full bg-amber-500 hover:bg-amber-400 text-[#0a1628] font-semibold mt-2">
-                    Get Started
-                  </Button>
+                  <Button className="w-full bg-amber-500 hover:bg-amber-400 text-[#0a1628] font-semibold mt-2">Get Started</Button>
                 </Link>
               </div>
             </div>
@@ -264,49 +310,23 @@ export function Header() {
   )
 }
 
-function MobileMenuItem({ item }: { item: typeof navigationItems[0] }) {
+function MobileSection({ label, href, children }: { label: string; href: string; children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false)
-
   return (
     <div className="border-b border-white/10 last:border-b-0">
-      <button
-        className="flex items-center justify-between w-full py-3 text-white font-medium"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {item.name}
-        {item.submenu && (
-          <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
-        )}
+      <button className="flex items-center justify-between w-full py-3 text-white font-medium text-sm" onClick={() => setIsOpen(!isOpen)}>
+        {label}
+        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
       </button>
       <AnimatePresence>
-        {isOpen && item.submenu && (
+        {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden"
           >
-            <div className="pb-4 pl-4">
-              {item.submenu.map((category) => (
-                <div key={category.category} className="mb-4">
-                  <h4 className="text-xs font-semibold text-amber-400 uppercase tracking-widest mb-2">
-                    {category.category}
-                  </h4>
-                  <ul className="space-y-2">
-                    {category.items.map((subItem) => (
-                      <li key={subItem.name}>
-                        <Link
-                          href={subItem.href}
-                          className="block text-white/60 hover:text-amber-400 transition-colors text-sm"
-                        >
-                          {subItem.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+            <div className="pb-4 pl-4">{children}</div>
           </motion.div>
         )}
       </AnimatePresence>
