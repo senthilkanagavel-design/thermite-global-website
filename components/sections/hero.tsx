@@ -22,7 +22,7 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 py-6 lg:py-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -30,22 +30,22 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="relative z-10"
           >
-            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-3 py-1.5 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-              Trusted by 500+ Healthcare Providers
+              Trusted by Healthcare Providers Nationwide
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary leading-tight mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary leading-tight mb-5">
               Revenue Cycle.{" "}
               <span className="text-secondary">Reimagined.</span>
             </h1>
 
-            <p className="text-base text-muted-foreground leading-relaxed mb-4 max-w-xl">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 max-w-xl">
               Comprehensive healthcare revenue cycle management solutions that maximize collections, reduce denials, and streamline your financial operations.
             </p>
 
             {/* Feature List */}
-            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 mb-5">
+            <div className="flex flex-wrap gap-3 mb-6">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature}
@@ -54,22 +54,22 @@ export function Hero() {
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
                   className="flex items-center gap-2 text-foreground/80"
                 >
-                  <CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0" />
-                  <span className="font-medium text-sm">{feature}</span>
+                  <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0" />
+                  <span className="font-medium">{feature}</span>
                 </motion.div>
               ))}
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/contact" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-6 gap-2">
+            <div className="flex flex-wrap gap-4">
+              <Link href="/contact">
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 gap-2">
                   Get Free Consultation
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="/about" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 gap-2">
+              <Link href="/about">
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 gap-2">
                   <Play className="h-5 w-5" />
                   Watch How It Works
                 </Button>
@@ -77,12 +77,12 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Hero Image — hidden on mobile to keep page clean */}
+          {/* Hero Image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative hidden lg:block"
+            className="relative"
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
@@ -92,6 +92,7 @@ export function Hero() {
                 className="object-cover"
                 priority
               />
+              {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
 
@@ -100,15 +101,15 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="absolute -bottom-6 -left-6 bg-card rounded-xl shadow-xl p-4 border border-border"
+              className="absolute -bottom-6 -left-6 bg-card rounded-xl shadow-xl p-6 border border-border"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <span className="text-lg font-bold text-secondary">$</span>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-secondary">✓</span>
                 </div>
                 <div>
-                  <p className="text-xl font-bold text-primary">$2.5B+</p>
-                  <p className="text-xs text-muted-foreground">Revenue Collected</p>
+                  <p className="text-2xl font-bold text-primary">Full-Cycle</p>
+                  <p className="text-sm text-muted-foreground">End-to-End RCM</p>
                 </div>
               </div>
             </motion.div>
@@ -118,10 +119,10 @@ export function Hero() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="absolute -top-4 -right-4 bg-card rounded-xl shadow-xl p-3 border border-border"
+              className="absolute -top-4 -right-4 bg-card rounded-xl shadow-xl p-4 border border-border"
             >
               <div className="text-center">
-                <p className="text-2xl font-bold text-secondary">98%</p>
+                <p className="text-3xl font-bold text-secondary">98%</p>
                 <p className="text-xs text-muted-foreground">Client Satisfaction</p>
               </div>
             </motion.div>

@@ -41,15 +41,17 @@ const values = [
 
 const stats = [
   { value: "15+", label: "Years Experience" },
-  { value: "500+", label: "Healthcare Providers" },
-  { value: "500+", label: "Team Members" },
+  { value: "Certified", label: "Healthcare Providers" },
+  { value: "Certified", label: "Team Members" },
   { value: "3", label: "Global Locations" },
 ]
 
 const certifications = [
   "HIPAA Compliant",
+  "SOC 2 Type II Certified",
   "AAPC Certified Coders",
   "AHIMA Certified Specialists",
+  "ISO 27001 Certified",
   "HBMA Member",
 ]
 
@@ -115,10 +117,10 @@ export function AboutPageContent() {
                 Thermite Global Solutions was founded with a simple mission: to help healthcare providers focus on patient care by taking the complexity out of revenue cycle management.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                What started as a small team of passionate billing experts has grown into a global organization with operations in the United States, India, and the Philippines. Our growth has been driven by our unwavering commitment to client success and our ability to deliver measurable results.
+                What started as a small team of passionate billing experts has grown into a global organization with operations in the United States, India, and the . Our growth has been driven by our unwavering commitment to client success and our ability to deliver measurable results.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-5">
-                Today, we serve over 500 healthcare providers across all specialties, managing billions of dollars in claims annually. Our team of 500+ certified professionals combines deep healthcare expertise with cutting-edge technology to deliver industry-leading outcomes.
+                Today, we serve over 500 healthcare providers across all specialties, managing billions of dollars in claims annually. Our team of Certified certified professionals combines deep healthcare expertise with cutting-edge technology to deliver industry-leading outcomes.
               </p>
 
               <Link href="/contact">
@@ -178,10 +180,10 @@ export function AboutPageContent() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-card rounded-xl border border-border p-5 text-center hover:shadow-lg transition-shadow"
               >
-                <div className="w-11 h-11 rounded-lg bg-secondary/10 flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="h-5 w-5 text-secondary" />
+                <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center mx-auto mb-6">
+                  <value.icon className="h-7 w-7 text-secondary" />
                 </div>
-                <h3 className="text-lg font-bold text-primary mb-2">{value.title}</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">{value.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
@@ -231,7 +233,7 @@ export function AboutPageContent() {
                     <Globe className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Manila, Philippines</h3>
+                    <h3 className="font-semibold mb-1">Manila, </h3>
                     <p className="text-primary-foreground/70">Patient engagement and support services</p>
                   </div>
                 </div>
@@ -285,7 +287,7 @@ export function AboutPageContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-center gap-4 bg-card rounded-xl border border-border p-5"
+                className="flex items-center gap-4 bg-card rounded-xl border border-border p-6"
               >
                 <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
                   <Shield className="h-6 w-6 text-secondary" />

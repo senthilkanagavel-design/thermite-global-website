@@ -64,7 +64,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin className="h-4 w-4 text-amber-400 flex-shrink-0 mt-0.5" />
-                <span>Dallas, TX | Chennai, India | Manila, Philippines</span>
+                <span>United States | Chennai, India</span>
               </div>
             </div>
           </div>
@@ -116,11 +116,11 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-col items-center gap-3 md:flex-row md:justify-between">
-            <div className="text-white/40 text-xs text-center md:text-left">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3">
+            <div className="text-white/40 text-xs">
               &copy; {new Date().getFullYear()} Thermite Global Solutions. All rights reserved.
             </div>
-            <div className="flex items-center gap-4 flex-wrap justify-center">
+            <div className="flex items-center gap-6">
               <Link href="/privacy" className="text-white/40 hover:text-white text-xs transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="text-white/40 hover:text-white text-xs transition-colors">Terms of Service</Link>
               <Link href="/hipaa" className="text-white/40 hover:text-white text-xs transition-colors">HIPAA Compliance</Link>

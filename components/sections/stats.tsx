@@ -18,17 +18,16 @@ const stats = [
     description: "Average improvement for clients",
   },
   {
-    value: 500,
-    suffix: "+",
-    label: "Healthcare Providers",
-    description: "Trust us with their RCM",
+    isText: true,
+    textValue: "Multi-Specialty",
+    label: "Coverage",
+    description: "Across all major specialties",
   },
   {
-    value: 2.5,
-    suffix: "B+",
-    label: "Revenue Collected",
-    description: "Annual collections managed",
-    prefix: "$",
+    isText: true,
+    textValue: "Full-Cycle",
+    label: "RCM Service",
+    description: "End-to-end revenue management",
   },
 ]
 
@@ -95,7 +94,11 @@ export function Stats() {
               className="text-center"
             >
               <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
+                {stat.isText ? (
+                  <span>{stat.textValue}</span>
+                ) : (
+                  <AnimatedCounter value={stat.value!} suffix={stat.suffix!} prefix={stat.prefix} />
+                )}
               </div>
               <h3 className="text-lg md:text-xl font-semibold text-primary-foreground mb-1">
                 {stat.label}

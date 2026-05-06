@@ -10,7 +10,7 @@ const steps = [
   { step: "05", emoji: "💳", title: "Payment & Denial Posting", description: "ERA / EOB / Reconciliation" },
   { step: "06", emoji: "🔄", title: "Denial Management", description: "Fix Issue & Resubmission" },
   { step: "07", emoji: "📞", title: "AR Follow-up", description: "NDNP & Aged Claims Action" },
-  { step: "08", emoji: "🧾", title: "Patient Statement", description: "Outstanding Due & Collections" },
+  { step: "08", emoji: "🧾", title: "Patient Statement & Collections", description: "Outstanding Due & Collections" },
 ]
 
 export function Process() {
@@ -35,9 +35,9 @@ export function Process() {
         </motion.div>
 
         {/* Stepper */}
-        <div className="relative flex items-start justify-between overflow-x-auto pb-4 gap-2 snap-x snap-mandatory">
+        <div className="relative flex items-start justify-between overflow-x-auto pb-4">
           {/* Horizontal line */}
-          <div className="absolute top-[28px] left-[calc(100%/16)] right-[calc(100%/16)] h-px bg-border z-0 hidden sm:block" />
+          <div className="absolute top-[28px] left-[calc(100%/16)] right-[calc(100%/16)] h-px bg-border z-0" />
 
           {steps.map((step, index) => (
             <motion.div
@@ -46,7 +46,7 @@ export function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.07 }}
-              className="relative z-10 flex flex-col items-center gap-2 flex-1 min-w-[72px] snap-start"
+              className="relative z-10 flex flex-col items-center gap-2 flex-1 min-w-[80px]"
             >
               {/* Circle */}
               <div className={`w-14 h-14 rounded-full flex items-center justify-center border-2 bg-card text-2xl transition-all duration-300

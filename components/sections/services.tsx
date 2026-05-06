@@ -10,6 +10,9 @@ import {
   Shield, 
   ClipboardCheck, 
   CreditCard,
+  BarChart2,
+  DollarSign,
+  Users,
   ArrowRight
 } from "lucide-react"
 
@@ -55,6 +58,34 @@ const services = [
     description: "Full-service revenue cycle management from patient scheduling to final payment. One partner for your entire revenue cycle needs.",
     href: "/services/rcm",
     features: ["End-to-End RCM", "Analytics Dashboard", "Performance Reports", "Dedicated Support"],
+  },
+  {
+    icon: BarChart2,
+    title: "Denial Management",
+    description: "Expert denial analysis, appeals and root cause resolution to recover revenue and prevent recurring denials.",
+    href: "/services/denial-management",
+    features: ["Denial Categorisation", "Appeal Preparation", "Root Cause Analysis", "Prevention Strategies"],
+  },
+  {
+    icon: DollarSign,
+    title: "Payment Posting",
+    description: "Accurate same-day payment posting, ERA/EOB reconciliation and variance identification to keep your AR clean.",
+    href: "/services/payment-posting",
+    features: ["ERA Automation", "EOB Posting", "Reconciliation", "Variance Follow-up"],
+  },
+  {
+    icon: Users,
+    title: "Provider Credentialing",
+    description: "Complete provider enrollment and re-credentialing management so your providers can bill without delays.",
+    href: "/services/credentialing",
+    features: ["Payer Enrollment", "CAQH Maintenance", "Re-credentialing", "Status Tracking"],
+  },
+  {
+    icon: Shield,
+    title: "Benefits Verification",
+    description: "Comprehensive benefits analysis confirming coverage, co-pays, deductibles and authorisation requirements before every visit.",
+    href: "/services/benefits-verification",
+    features: ["Benefits Breakdown", "Deductible Tracking", "Co-pay Confirmation", "Patient Estimates"],
   },
 ]
 

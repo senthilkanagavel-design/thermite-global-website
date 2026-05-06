@@ -30,14 +30,14 @@ export function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-white text-secondary hover:bg-white/90 font-semibold px-8 gap-2">
+            <Link href="/contact">
+              <Button size="lg" className="bg-white text-secondary hover:bg-white/90 font-semibold px-8 gap-2">
                 <Calendar className="h-5 w-5" />
                 Schedule Free Consultation
               </Button>
             </Link>
-            <a href="tel:+10000000000" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-white/10 border border-white text-white hover:bg-white/20 font-semibold px-8 gap-2">
+            <a href="tel:+1-800-555-0199">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-semibold px-8 gap-2">
                 <Phone className="h-5 w-5" />
                 Call Us Now
               </Button>

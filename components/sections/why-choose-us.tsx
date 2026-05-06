@@ -15,17 +15,17 @@ const reasons = [
   {
     icon: Cpu,
     title: "Advanced Technology",
-    description: "AI-powered automation, real-time analytics, and seamless EHR integration to optimize every step of your revenue cycle.",
+    description: "AI-powered tools, real-time analytics, and purpose-built RCM technology to optimize every step of your revenue cycle.",
   },
   {
     icon: Shield,
     title: "HIPAA Compliant",
-    description: "Enterprise-grade security with full HIPAA compliance, ensuring your patient data is always protected.",
+    description: "Enterprise-grade security with end-to-end encryption, role-based access controls and full audit trails on every interaction.",
   },
   {
     icon: Users,
-    title: "Expert Team",
-    description: "500+ certified coders and billing specialists with deep expertise across all medical specialties.",
+    title: "Certified & Experienced Team",
+    description: "Certified coders and billing specialists with deep expertise across all medical specialties and payer types.",
   },
   {
     icon: BarChart3,
@@ -35,12 +35,12 @@ const reasons = [
   {
     icon: HeadphonesIcon,
     title: "Dedicated Support",
-    description: "24/7 customer support with dedicated account managers who understand your practice inside and out.",
+    description: "24/7 support with dedicated account managers who understand your practice and are accountable to your results.",
   },
   {
     icon: Zap,
-    title: "Fast Implementation",
-    description: "Go live in as little as 30 days with our proven onboarding process and minimal disruption to your operations.",
+    title: "Fast Onboarding",
+    description: "Structured onboarding process with minimal disruption — your team stays focused on patient care from day one.",
   },
 ]
 

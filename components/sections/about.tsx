@@ -10,12 +10,12 @@ const highlights = [
   {
     icon: Globe,
     title: "Global Delivery",
-    description: "Operations in US, India, and Philippines",
+    description: "Operations in US & India",
   },
   {
     icon: Users,
     title: "Expert Team",
-    description: "500+ certified billing professionals",
+    description: "Certified & Experienced Team",
   },
   {
     icon: Clock,
@@ -33,9 +33,9 @@ const benefits = [
   "Customized solutions for your specialty",
   "Dedicated account management team",
   "Real-time analytics and reporting",
-  "Seamless EHR/PM integration",
   "Transparent pricing with no hidden fees",
   "HIPAA compliant processes",
+  "Proven revenue cycle expertise",
 ]
 
 export function About() {

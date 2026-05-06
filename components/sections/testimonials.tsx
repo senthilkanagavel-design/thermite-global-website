@@ -1,30 +1,38 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Star, Quote } from "lucide-react"
-import Image from "next/image"
+import { Target, Eye, Heart, Shield, BarChart3, Users } from "lucide-react"
 
-const testimonials = [
+const approaches = [
   {
-    quote: "Thermite Global Solutions transformed our revenue cycle completely. We saw a 35% increase in collections within the first quarter and reduced our days in AR from 45 to just 28 days.",
-    author: "Dr. Sarah Johnson",
-    title: "CEO, Midwest Cardiology Associates",
-    image: "/images/testimonial-1.jpg",
-    metrics: ["35% increase in collections", "28 days in AR"],
+    icon: Target,
+    title: "Outcome-First Thinking",
+    description: "Every decision we make starts with one question — does this improve collections, reduce denials or save your team time? If not, we don't do it.",
   },
   {
-    quote: "Their coding accuracy is exceptional. We went from a 15% denial rate to less than 3%. The team is responsive, knowledgeable, and truly partners with us on our success.",
-    author: "Michael Chen",
-    title: "Practice Administrator, Pacific Orthopedics",
-    image: "/images/testimonial-2.jpg",
-    metrics: ["3% denial rate", "97% clean claims"],
+    icon: Eye,
+    title: "Full Transparency",
+    description: "You have complete visibility into every claim, every denial and every dollar. No black boxes, no surprises — just clear, real-time reporting.",
   },
   {
-    quote: "The real-time analytics dashboard gives us complete visibility into our financial performance. I can now make data-driven decisions that have significantly improved our bottom line.",
-    author: "Dr. Emily Rodriguez",
-    title: "Medical Director, Southwest Radiology Group",
-    image: "/images/testimonial-3.jpg",
-    metrics: ["40% productivity increase", "Real-time insights"],
+    icon: Heart,
+    title: "Your Practice, Our Priority",
+    description: "We don't manage accounts — we partner with practices. Your dedicated team learns your workflows, your payers and your goals.",
+  },
+  {
+    icon: Shield,
+    title: "Compliance at the Core",
+    description: "HIPAA compliance isn't a feature — it's how we operate. Every process, every system and every staff member is held to the same standard.",
+  },
+  {
+    icon: BarChart3,
+    title: "Data-Driven at Every Step",
+    description: "We use performance data to continuously improve — denial trends, payer behaviour and coding patterns all feed back into how we work.",
+  },
+  {
+    icon: Users,
+    title: "People Who Know RCM",
+    description: "Our team is made up of certified coders, experienced billers and RCM specialists — not generalists handed a billing manual.",
   },
 ]
 
@@ -32,79 +40,37 @@ export function Testimonials() {
   return (
     <section className="py-6 lg:py-10 bg-background">
       <div className="container mx-auto px-4">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-5"
+          className="text-center max-w-3xl mx-auto mb-6"
         >
-          <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+          <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Approach</span>
           <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-3">
-            What Our Clients Say
+            How We Think About RCM
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed">
-            Healthcare providers across the nation trust us with their revenue cycle management.
+            The principles that guide every engagement — from onboarding your first claim to recovering your oldest denial.
           </p>
         </motion.div>
 
-        {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {testimonials.map((testimonial, index) => (
+          {approaches.map((item, index) => (
             <motion.div
-              key={testimonial.author}
+              key={item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card rounded-xl border border-border p-6 hover:shadow-lg transition-shadow"
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              className="bg-card border border-border rounded-xl p-5 hover:border-secondary/30 hover:shadow-md transition-all"
             >
-              {/* Quote Icon */}
-              <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                <Quote className="h-5 w-5 text-secondary" />
+              <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-3">
+                <item.icon className="h-5 w-5 text-secondary" />
               </div>
-
-              {/* Stars */}
-              <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-accent text-accent" />
-                ))}
-              </div>
-
-              {/* Quote */}
-              <p className="text-sm text-foreground leading-relaxed mb-4">
-                {`"${testimonial.quote}"`}
-              </p>
-
-              {/* Metrics */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {testimonial.metrics.map((metric) => (
-                  <span
-                    key={metric}
-                    className="bg-secondary/10 text-secondary text-sm font-medium px-3 py-1 rounded-full"
-                  >
-                    {metric}
-                  </span>
-                ))}
-              </div>
-
-              {/* Author */}
-              <div className="flex items-center gap-4 pt-6 border-t border-border">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-muted">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.author}
-                    width={48}
-                    height={48}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="font-semibold text-primary">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                </div>
-              </div>
+              <h3 className="text-base font-bold text-primary mb-2">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </div>

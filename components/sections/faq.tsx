@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "How quickly can you implement your RCM services?",
-    answer: "Our typical implementation timeline is 30-45 days from contract signing to go-live. This includes system integration, staff training, workflow setup, and a parallel billing period to ensure a smooth transition with minimal disruption to your operations.",
+    answer: "Our typical implementation timeline is 30-45 days from contract signing to go-live. This includes staff onboarding, workflow setup, process configuration, and a parallel billing period to ensure a smooth transition with minimal disruption to your operations.",
   },
   {
     question: "What specialties do you support?",
@@ -26,12 +26,9 @@ const faqs = [
   },
   {
     question: "How do you ensure HIPAA compliance?",
-    answer: "We maintain strict HIPAA compliance through comprehensive security measures including encrypted data transmission, secure facilities, regular security audits, employee training, and business associate agreements.",
+    answer: "We maintain strict HIPAA compliance through comprehensive security measures including encrypted data transmission, secure facilities, regular security audits, employee training, and business associate agreements. ",
   },
   {
-    question: "What EHR/PM systems do you integrate with?",
-    answer: "We integrate with all major EHR and practice management systems including Epic, Cerner, Athenahealth, NextGen, eClinicalWorks, Meditech, and many others. Our technical team ensures seamless data exchange and workflow integration.",
-  },
   {
     question: "How do you handle claim denials?",
     answer: "Our denial management team analyzes each denial to identify root causes, corrects issues, and resubmits claims promptly. We also implement proactive denial prevention strategies by identifying patterns and addressing issues before they result in denials.",
