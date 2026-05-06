@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     question: "What reporting and analytics do you provide?",
-    answer: "We provide real-time dashboards and comprehensive reports covering key metrics like clean claim rates, days in AR, denial rates, collection rates, and payer performance. You have 24/7 access to your data through our secure client portal.",
+    answer: "We provide real-time dashboards and comprehensive reports through Thrive — our proprietary RCM platform — covering key metrics like clean claim rates, days in AR, denial rates, collection rates and payer performance. Your dedicated account manager reviews these with you regularly.",
   },
   {
     question: "What are your pricing models?",

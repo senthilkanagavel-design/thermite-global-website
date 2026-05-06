@@ -14,8 +14,8 @@ import {
 const reasons = [
   {
     icon: Cpu,
-    title: "Advanced Technology",
-    description: "AI-powered tools, real-time analytics, and purpose-built RCM technology to optimize every step of your revenue cycle.",
+    title: "Powered by Thrive",
+    description: "Thrive is our proprietary RCM intelligence platform — built to manage workflows, track AR, surface denial patterns and deliver real-time performance reporting to our clients.",
   },
   {
     icon: Shield,
@@ -29,8 +29,8 @@ const reasons = [
   },
   {
     icon: BarChart3,
-    title: "Data-Driven Insights",
-    description: "Custom dashboards and real-time reporting give you complete visibility into your financial performance.",
+    title: "Real-Time Visibility",
+    description: "Thrive delivers custom dashboards and real-time reporting so you always have complete visibility into your AR, denials and collection performance.",
   },
   {
     icon: HeadphonesIcon,
@@ -67,7 +67,7 @@ export function WhyChooseUs() {
               The Thermite Advantage
             </h2>
             <p className="text-base text-primary-foreground/80 leading-relaxed mb-5">
-              We combine cutting-edge technology with deep healthcare expertise to deliver results that matter. Here&apos;s what sets us apart from other RCM providers.
+              We combine deep RCM expertise with Thrive — our proprietary workflow and analytics platform — to deliver results that matter. Here's what sets us apart.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-5">

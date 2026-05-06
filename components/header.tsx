@@ -52,15 +52,6 @@ const simpleNavItems = [
     ],
   },
   {
-    name: "Technology",
-    href: "/technology",
-    items: [
-      { name: "Platform Overview", href: "/technology" },
-      { name: "Analytics Dashboard", href: "/technology#analytics" },
-      { name: "AI-Powered Workflows", href: "/technology#ai" },
-    ],
-  },
-  {
     name: "About",
     href: "/about",
     items: [

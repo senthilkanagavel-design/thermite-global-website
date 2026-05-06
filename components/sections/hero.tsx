@@ -32,7 +32,7 @@ export function Hero() {
           >
             <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-              Trusted by Healthcare Providers Nationwide
+              Powered by Thrive — Our Proprietary RCM Platform
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold text-primary leading-tight mb-5">
@@ -105,11 +105,11 @@ export function Hero() {
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-secondary">✓</span>
+                  <span className="text-lg font-bold text-secondary">T</span>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-primary">Full-Cycle</p>
-                  <p className="text-sm text-muted-foreground">End-to-End RCM</p>
+                  <p className="text-base font-bold text-primary">Thrive</p>
+                  <p className="text-xs text-muted-foreground">Powered by our RCM platform</p>
                 </div>
               </div>
             </motion.div>

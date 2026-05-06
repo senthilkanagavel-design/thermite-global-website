@@ -32,7 +32,7 @@ const highlights = [
 const benefits = [
   "Customized solutions for your specialty",
   "Dedicated account management team",
-  "Real-time analytics and reporting",
+  "Real-time AR and denial reporting via Thrive",
   "Transparent pricing with no hidden fees",
   "HIPAA compliant processes",
   "Proven revenue cycle expertise",
