@@ -87,7 +87,7 @@ function ServicesDropdown() {
   const [activeGroup, setActiveGroup] = useState<string | null>(null)
 
   return (
-    <div className="bg-[#0d1f3c] rounded-lg shadow-2xl border border-white/10 py-2 min-w-[260px]">
+    <div className="bg-[#0d1f3c] rounded-lg shadow-2xl border border-white/10 py-2 min-w-[280px]">
       {servicesNav.groups.map((group) => (
         <div
           key={group.label}
@@ -95,7 +95,7 @@ function ServicesDropdown() {
           onMouseEnter={() => setActiveGroup(group.label)}
           onMouseLeave={() => setActiveGroup(null)}
         >
-          <button className="flex items-center justify-between w-full px-4 py-2 text-sm font-semibold text-amber-400 hover:bg-white/5 transition-colors gap-8">
+          <button className="flex items-center justify-between w-full px-4 py-2 text-sm font-semibold text-amber-400 hover:bg-white/5 transition-colors gap-4 text-left">
             {group.label}
             <ChevronRight className="h-3.5 w-3.5 flex-shrink-0" />
           </button>
